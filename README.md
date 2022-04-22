@@ -17,10 +17,10 @@ Ante cualquier eventaulidad favor contactar a:
 
 ## Páginas de Referencia
 avon.com
-a4patastienda.com
-linio.com
-mercadolibre.com
-amazon.com
+a4patastienda.com;
+linio.com;
+mercadolibre.com;
+amazon.com;
 
 ## Roadmap
 
