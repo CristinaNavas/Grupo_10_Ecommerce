@@ -24,11 +24,11 @@ amazon.com;
 
 ## WireFrames Sprint 1
 
-<img src= "./wireframes/HOME.png" width='300' title="Home"/>
-<img src= "./wireframes/FORMULARIO_DE_REGISTRO.png" width='300' title="Registro"/>
-<img src= "./wireframes/FORMULARIO_DE_LOGIN.png" width='300' title="Login"/>
-<img src= "./wireframes/DETALLE_DEL_PRODUCTO.png" width='300' title="Producto"/>
-<img src= "./wireframes/CARRITO.png" width='300' title="Carrito"/>
+<img src= "./wireframes/HOME.png" width='100' title="Home"/>
+<img src= "./wireframes/FORMULARIO_DE_REGISTRO.png" width='100' title="Registro"/>
+<img src= "./wireframes/FORMULARIO_DE_LOGIN.png" width='100' title="Login"/>
+<img src= "./wireframes/DETALLE_DEL_PRODUCTO.png" width='100' title="Producto"/>
+<img src= "./wireframes/CARRITO.png" width='100' title="Carrito"/>
 
 
 
