@@ -1,0 +1,24 @@
+{
+  "name": "grupo_10_ecommerce",
+  "version": "1.0.0",
+  "description": "Vamos a elaborar una tienda de artículos musicales online",
+  "main": "App.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristinaNavas/Grupo_10_Ecommerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CristinaNavas/Grupo_10_Ecommerce/issues"
+  },
+  "homepage": "https://github.com/CristinaNavas/Grupo_10_Ecommerce#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}

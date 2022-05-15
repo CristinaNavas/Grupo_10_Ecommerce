@@ -1,0 +1,47 @@
+:root {
+    --Amarillo: #eac926;
+    --Azul: #03264c;
+    --Celeste: #1259c3;
+    --Gris-oscuro: #666;
+    --Gris-claro: #ebebeb;
+    --Verde: #39b54a;
+  }
+  
+  .form {
+    padding: 4% 15%;
+    margin: center;
+  }
+  
+  .control-form {
+    margin-bottom: 5%;
+  }
+  
+  .campo-texto {
+    background-color: white;
+    font: var(--Gris-oscuro);
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    margin-left: 20%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+  }
+  
+  .button-login {
+    background-color: #1259c3;
+    color: white;
+    border: none;
+    padding: 5px 5px;
+    border-radius: 5px;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom:10%
+  }
+  
+  .button-login:hover {
+    background-color: #0022aa;
+    color: white;
+  }
