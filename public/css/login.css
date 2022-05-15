@@ -1,12 +1,19 @@
-:root {
-    --Amarillo: #eac926;
-    --Azul: #03264c;
-    --Celeste: #1259c3;
-    --Gris-oscuro: #666;
-    --Gris-claro: #ebebeb;
-    --Verde: #39b54a;
-  }
-  
+root {
+  --hamburger-button: #cec77d;
+  --header: #d4a40d;
+}
+    
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  background-color: #ebebeb;
+}
+    
   .form {
     padding: 4% 15%;
     margin: center;
@@ -31,7 +38,7 @@
   }
   
   .button-login {
-    background-color: green;
+    background-color:#d4a40d;
     color: white;
     border: none;
     padding: 5px 5px;
