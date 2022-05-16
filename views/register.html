@@ -4,13 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/register.css">
+    <link rel="stylesheet" href="/css/register.css">
     <title>Document</title>
 </head>
 <body>
     <header></header>
     <main>
+        
+        <form class="form-register" action="/register" method="POST">
+            
+            <h2>Registro de Usuario</h2>
 
+            <div>
+                <input class="nombreYapellido" type="text" name="nombreYapellido" placeholder="Nombre y apellido">   
+            </div>
+
+            <div>
+                <input class="nombre-de-usuario" type="text" name="nombreUsuario" id="nombre-usuario" placeholder="Nombre de usuario">
+            </div>
+
+
+            <div class="label-fecha-nacimiento">
+                <label for="birthdate"><strong >Fecha de nacimiento</strong></label>
+            </div>
+            <div>
+                <input class="input-fecha-nacimiento border-radius-boxes" type="date" name="birthdate" id="birthdate">
+            </div>
+
+            <div >
+                <input class="domicilio" type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+            </div>
+
+
+
+        
+             
+            <div class="label-perfil-usuario">
+                <label  for="perfil-usuario"><strong >Perfil de usuario</strong></label>
+            </div>
+                
+            <div>    
+                <div class="input1-perfil-usuario">
+                    <input type="radio">
+                    <label for="">Comprador</label>
+                </div>
+
+                <div class="input2-perfil-usuario">
+                    <input type="radio">
+                    <label for="">vendedor</label>
+                </div>
+                
+            </div>
+
+            
+
+            
+            <div  class="label-foto-usuario">
+                <label for="fotoUsuario"><strong >Cargar foto de usuario</strong></label>
+            </div>
+
+            <div class="div-foto-usuario">    
+                <input class="foto-usuario" type="file" name="fotoUsuario" accept=".jpg" id="fotoUsuario">
+            </div>
+
+
+            <div>
+                <input class="contraseña" type="password" name="Contraña" id="contraseña" placeholder="Elegí tu contraseña">
+            </div>
+
+            <div>
+                <input class="nombreDeUsuario" type="text" name="NombreDeUsuario" id="nombreDeUsuario" placeholder="Nombre de usuario">
+            </div>
+
+
+
+            <div class="divBotonEnviar">
+                <button class="botonEnviar">Enviar</button>
+            </div>
+
+    
+        </form>
         
     </main>
     <footer></footer>

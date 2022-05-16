@@ -1,0 +1,163 @@
+root {
+    --hamburger-button: #cec77d;
+    --header: #d4a40d;
+  }
+      
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+    margin: auto;
+    background-color: #ebebeb;
+  } 
+
+form {
+     padding: 4% 15%;
+     margin: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.nombreYapellido {
+    background-color: white;
+    font: var(--Gris-oscuro);
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    margin-left: 20%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.nombre-de-usuario {
+    background-color: white;
+    font: var(--Gris-oscuro);
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    margin-left: 20%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+ .label-fecha-nacimiento {
+    margin-left: 20%;
+    margin-bottom: 10px;
+}  
+
+.input-fecha-nacimiento {
+    background-color: white;
+    font: var(--Gris-oscuro);
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    margin-left: 20%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.domicilio {
+    background-color: white;
+    font: var(--Gris-oscuro);
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    margin-left: 20%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.input1-perfil-usuario {
+    margin-left: 20%;
+}
+
+.input2-perfil-usuario {
+    margin-left: 20%;
+    margin-bottom: 10px;
+}
+
+.label-perfil-usuario {
+    margin-left: 20%;
+    margin-bottom: 10px;
+}
+
+
+.label-foto-usuario {
+    margin-left: 20%;
+    margin-bottom: 10px;
+}
+
+.div-foto-usuario {
+    margin-left: 20%;
+}
+
+.foto-usuario {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contraseña {
+    background-color: white;
+    font: var(--Gris-oscuro);
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    margin-left: 20%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.nombreDeUsuario {
+    background-color: white;
+    font: var(--Gris-oscuro);
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    margin-left: 20%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+   
+}
+
+.divBotonEnviar {
+    width: 100%;
+}
+
+.botonEnviar {
+        background-color:#d4a40d;
+        color: white;
+        border: none;
+        padding: 5px 5px;
+        border-radius: 5px;
+        width: 61.08%; 
+        margin-left: 20%;
+        margin-bottom:10%;
+    
+}
+
+.botonEnviar:hover {
+    background-color: #0022AA;
+}
