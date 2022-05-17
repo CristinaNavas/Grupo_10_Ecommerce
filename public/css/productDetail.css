@@ -1,0 +1,240 @@
+@import url(Index.css);
+
+
+
+
+main .container{
+    background-color: #ebebeb;
+    margin: auto;
+    margin-top: 5px;
+   
+}
+
+section{
+    font-size: 24px;
+    margin: auto;
+    width: 90vw;
+}
+
+.formulario-instrumentos{
+    border: dotted red 1px;
+    text-align:center;
+    background-color: rgb(214, 240, 226);
+    margin: auto;
+    
+    
+}
+.slide-pics{
+    
+    border: solid black 1px;
+    background-color: rgba(214, 240, 226,0.8);
+    align-items: center;
+    margin: auto;
+    
+}
+
+section .titSection{
+    margin: 7px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: rgba(214, 240, 226,0.8);
+}
+
+section .precio{
+    font-size: 18px;
+}
+
+section .descuento{
+    font-size: 16px;
+    color: #d505c4;
+    font-weight: bold;
+}
+
+ section .descripcion{
+    font-size: 11px;
+
+ }
+
+ .articulo{
+    
+    margin: 10px;
+    background-color: rgba(214, 240, 226,0.8);
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 20px;
+    padding: 12px;
+}
+
+.articulo .im{
+    text-align: center;
+}
+
+.articulo:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+/* main img{
+    max-height: 100%;
+    max-width: 100%;
+}
+ */
+.articulo .pr{
+    /*  border-color: #ebebeb;
+     border-style: solid; 
+     border-width: 1px; */
+     border-top: solid 1px;
+     border-top-color: #ebebeb;
+     text-align: center;
+     background-color: white;
+     padding: 10px;
+     text-align: left;
+ }
+
+ /* PROBANDO */
+
+ .productHolder{ 
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* background-color: rgba(214, 240, 226,0.8); */
+
+}
+
+.card{
+    background-color: white;
+    cursor: pointer;
+    display:flex;
+    flex-direction: column;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: center;
+    min-height: 370px;
+    border-radius: 1rem;
+    margin: 1.5rem;
+    transition: 0.3s;
+    padding: 15px;
+
+}
+
+.im{
+    height: 100%;
+    width: 100%;        
+    border: 5px solid black;
+}
+ .im img{
+    max-height: 100%;
+    max-width: 100%;
+    display: block;
+} 
+
+
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.cardText *{
+    margin: 0.5rem;
+}
+
+.categoryText{
+    font-weight: 422;
+    opacity: 0.7;
+}
+
+.brandText{
+    color:#4287f5
+}
+.priceText{
+    font-size: large;
+}
+
+.offerText{
+    font-size: small;
+}
+
+
+ /* PROBANDO */
+
+  /* PROBANDO 2*/
+
+.cards{
+    width: 28rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+    box-shadow: 5px 5px 1rem rgba(0,0,0,.1);
+}
+.image-container{
+    height: 18rem;
+}
+.image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.info-container{
+    padding: 2rem;
+}
+.heading{
+    font-size: 3rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 1rem;
+}
+.paragraph{
+    font-size: 1.6rem;
+}
+.btn{
+    display: inline-block;
+    font-size: 1.2rem;
+    color:#333;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    margin-top: 2.5rem;
+    border-radius: 2rem;
+    box-shadow:  1px 2px 1rem rgba(0,0,0,.1);
+    transition: background-color .5s;
+}
+.btn:hover{
+    background-color: rgba(0,0,0,.1);
+}
+
+  /* PROBANDO 2*/
+
+
+ @media (min-width: 425px){
+
+    section .articulos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    section .titSection{
+        width: 100%; 
+    }
+       
+    .articulo,  .formulario-instrumentos {
+        width: 44%;  
+    }
+
+ /*    .articulo .descripcion{
+        width: 40%;
+        display: none;
+    }
+
+    .articulo:hover .descripcion{
+        display: block;
+    }
+      */
+}
+
+@media(min-width: 768px){
+    .articulo,  .formulario-instrumentos {
+        width: 30%;  
+    }
+}
