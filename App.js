@@ -36,3 +36,8 @@ app.get("/productCart", (req, res) => {
     let htmlPath = path.resolve(__dirname, "./views/productDetail.html");
     res.sendFile(htmlPath);
   });
+
+  app.get("/carrito", (req, res) => {
+    let htmlPath = path.resolve(__dirname, "./views/carrito.html");
+    res.sendFile(htmlPath);
+  });

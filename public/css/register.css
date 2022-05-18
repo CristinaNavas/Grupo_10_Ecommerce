@@ -31,7 +31,7 @@ h2 {
     border: none;
     border-radius: 5px;
     font-size: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 22px;
     font-weight: bold;
     margin-left: 20%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -45,15 +45,29 @@ h2 {
     border: none;
     border-radius: 5px;
     font-size: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 22px;
     font-weight: bold;
     margin-left: 20%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
+.email {
+    background-color: white;
+    font: var(--Gris-oscuro);
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 12px;
+    font-weight: bold;
+    margin-left: 20%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100)
+  }
+
  .label-fecha-nacimiento {
     margin-left: 20%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }  
 
 .input-fecha-nacimiento {
@@ -64,7 +78,7 @@ h2 {
     border: none;
     border-radius: 5px;
     font-size: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 22px;
     font-weight: bold;
     margin-left: 20%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -78,7 +92,7 @@ h2 {
     border: none;
     border-radius: 5px;
     font-size: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 22px;
     font-weight: bold;
     margin-left: 20%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -95,22 +109,29 @@ h2 {
 
 .label-perfil-usuario {
     margin-left: 20%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 
 .label-foto-usuario {
     margin-left: 20%;
-    margin-bottom: 10px;
-}
-
-.div-foto-usuario {
-    margin-left: 20%;
+    margin-bottom: 5px;
 }
 
 .foto-usuario {
-    text-align: center;
-    margin-bottom: 10px;
+    /* text-align: center;
+    margin-bottom: 10px; */
+    background-color: white;
+    font: var(--Gris-oscuro);
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 22px;
+    font-weight: bold;
+    margin-left: 20%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 .contraseña {
@@ -121,7 +142,7 @@ h2 {
     border: none;
     border-radius: 5px;
     font-size: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 22px;
     font-weight: bold;
     margin-left: 20%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -135,7 +156,7 @@ h2 {
     border: none;
     border-radius: 5px;
     font-size: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 22px;
     font-weight: bold;
     margin-left: 20%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -152,7 +173,7 @@ h2 {
         border: none;
         padding: 5px 5px;
         border-radius: 5px;
-        width: 61.08%; 
+        width: 60%; 
         margin-left: 20%;
         margin-bottom:10%;
     

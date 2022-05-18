@@ -50,6 +50,13 @@ header {
   text-align: center;
 }
 
+.carrito {
+  padding: 0.2% 1% 0% 3%;
+  color: var(--hamburger-button);
+  text-align: center ;
+  font-size: 130%;
+}
+
 .lupa {
   padding: 0% 1% 0% 3%;
   color: var(--hamburger-button);
