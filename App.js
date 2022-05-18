@@ -2,6 +2,10 @@ const express = require("express");
 const app = express();
 const path = require("path");
 app.use(express.static("public"));
+
+/* example = require('./views/productDetail') */
+
+
 app.listen(3100, () => {
     console.log("Servidor corriendo en Http://localhost:3100");
   });
@@ -32,7 +36,12 @@ app.get("/productCart", (req, res) => {
     let htmlPath = path.resolve(__dirname, "./views/productCart.html");
     res.sendFile(htmlPath);
   });
-  app.get("/productDetail.html", (req, res) => {
+  app.get("/productdetail", (req, res) => {
     let htmlPath = path.resolve(__dirname, "./views/productDetail.html");
+    res.sendFile(htmlPath);
+  });
+
+  app.get("/carrito", (req, res) => {
+    let htmlPath = path.resolve(__dirname, "./views/carrito.html");
     res.sendFile(htmlPath);
   });

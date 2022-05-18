@@ -1,0 +1,155 @@
+
+
+body {
+    background-color: #ebebeb
+}
+
+main {
+    width: 90%;
+    margin: auto;
+}
+
+main h2 {
+    text-align: center;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.contenedor-padre {
+    
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.label-producto {
+    font-size: 16px;
+    margin-right: 2%;
+}
+
+.visor-producto {
+    width: 50%;
+    height: 250px;
+    border: solid 2px black;
+    border-radius: 5px;
+    margin-right: 2%;
+    background-color: white;
+}
+
+.btn-más {
+    background-color:#d4a40d;
+    border-radius: 5px;
+     
+}
+
+.div-núnero-de-productos{
+    width: 12%;
+
+}
+
+.núnero-de-productos {
+   width: 100%;
+   border-radius: 5px;
+}
+
+.btn-menos {
+    background-color:#d4a40d;
+    border-radius: 5px;
+}
+
+.div-btn-quitar-último {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.btn-quitar-último {
+    background-color:#d4a40d;
+    color: white;
+    border-radius: 5px;
+    width: 50%; 
+    height: 26px;
+}  
+
+.btn-quitar-último:hover {
+    background-color: #0022AA;
+} 
+
+/* .btn-vaciar-carrito {
+    background-color:#d4a40d;
+    color: white;
+    border-radius: 5px;
+    width: 50%; 
+    height: 26px;
+}  
+
+.btn-vaciar-carrito:hover {
+    background-color: #0022AA;
+} */
+
+.div-btn-vaciar-carrito {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.btn-vaciar-carrito {
+    background-color:#d4a40d;
+    color: white;
+    border-radius: 5px;
+    width: 50%; 
+    height: 26px;
+}  
+
+.btn-vaciar-carrito:hover {
+    background-color: #0022AA;
+}
+
+.total-de-carrito {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.input-total {
+    border: solid 1px black;
+    border-radius: 5px;
+    height: 22px;
+    width: 100px;
+    margin-left: 2px;
+}
+
+.div-btn-finalizar-compra{
+    width: 100%;
+    text-align: center;
+} 
+
+.btn-finalizar-compra {
+    background-color:#d4a40d;
+    color: white;
+    border-radius: 5px;
+    width: 50%; 
+    height: 26px;
+}  
+
+.btn-finalizar-compra:hover {
+    background-color: #0022AA;
+}
+
+/*  *****************Media Querty tabkets *************/
+
+@media(min){
+
+}/* *************** Media Query Desktop ******************/
+
+@media(min){
+
+}
+
+ 

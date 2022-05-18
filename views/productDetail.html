@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/productDetail.css">
+    <!-- 
+    ****************link fuentes Google******************* -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+    <!-- **************************link iconos Awesome********************** -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    
+    <script defer src="./productDetail.js" type="text/javascript" language='javascript'></script>
+    <title>Clave de Sol</title>
+</head>
+
+<body>
+    <header>
+        <div class="top-header">
+            <div>
+                <a href="/"><img class="logo" src="img/claveLogo.jpg" alt="logo Clave de sol"></a>
+            </div>
+
+            <div class="ingreso">
+                <p class="header-text"><a href="/login"> <i class="fas fa-sign-in-alt ingreso  "></i></a></p>
+            </div>
+
+            <div class="registro">
+                <p class="header-text"><a href="/register"><i class="fas fa-user-plus registro  "></i> </a></p>
+            </div>
+
+            <div class="lupa">
+                <p class="header-text"><a href="#"><i class="fas fa-search lupa "></i></a></p>
+            </div>
+        </div>
+       <div class ="nabvar-tablet">
+        <nav class="main-navbar">
+            <ul>
+              <li><a href="#"> <strong>Ofertas</strong> </a></li>
+              <li> <a href="/productCart"><strong>Tienda Online</strong></a></li>
+              <li><a href="/productdetail"><strong>Productos</strong></a></li>
+           </ul>
+            </nav>
+        </div>
+
+        <nav class="navbar-menu">
+            <div class="hamburger-button">
+                <a href="#" class="hamburguer-button">
+                    <i class="fas fa-bars  barra"></i>
+                </a>
+            </div>
+      </nav>
+
+
+
+    </header>
+
+    <main class="container">
+
+        <section class="principal">
+            <script type="text/javascript" language='javascript'>
+                function tipo() {
+                    let instrumento= document.getElementById('instrumento');
+                    let myType = document.getElementById('myType');
+
+                    myType.value = instrumento.children[instrumento.selectedIndex].getAttribute('value');
+
+                    console.log(myType.value);
+                    if(myType.value == "cuerda"){
+                        
+                        removeWhiteDiv()
+                        removeElement()
+                        createCard(guitar3);
+                        createCard(guitar2);
+                        createCard(guitar1);
+                    } else if(myType.value == "percución"){
+                        
+                        removeWhiteDiv()
+                        removeElement()
+                        createCard(drum2);
+                        createCard(drum1);
+                    } else if(myType.value == "aire"){
+                        
+                        removeWhiteDiv()
+                        removeElement()
+                        createCard(air1);
+                        createCard(air2);
+                        createCard(air3);
+                    } else{
+                        /* removeElement()
+                        createWhiteDiv() */
+                        location.reload();
+                    }
+                } 
+          
+            </script>
+
+            <form action="/" class="formulario-instrumentos" onchange="javascript:tipo()">
+                <label for="instrumento">Elige un tipo:</label>
+                
+                <select id="instrumento" name="instrumento">
+                    <option value="" disabled selected>Elige un Tipo</option>
+                    <option value="cuerda">Cuerda</option>
+                    <option value="percución">Percución</option>
+                    <option value="aire">Aire</option>
+                    <option value="empty">Empty</option>
+                </select>
+                <!-- <input type="submit" value="buscar"> -->
+            </form>
+
+            <div class="vacio">
+                
+
+               <!--  width: 100%;
+                height: 100%;
+                border: dotted black 1px;
+                padding: 168px; -->
+            </div>
+            <div class="productHolder" id="myType">
+
+            </div>
+                <!-- <script src="./productDetail.js" type="text/javascript"></script> -->
+                <script>
+                    const products = document.querySelector(".productHolder");
+
+                    function createCard([img, product, category, brandName, rating, price, offer]) {
+
+
+                    let code = `
+                    <div class="card">
+                        
+                            <img src="${img}" alt="${product}">
+                        
+                        <div class="cardText">
+                            <p class="categoryText">${category}</p>
+                            <h2 class="brandText">${brandName}</h2>
+                            <h5>${rating}</h5>
+                            <p class="priceText">${price}</p>
+                            <p class="offerText">${offer}</p>
+                            <a href="/productCart" class="btn"> Añadir al carrito </a>
+                        </div>
+                        
+                    </div> 
+                    `
+
+                    products.innerHTML += code;
+                }
+
+                let guitar1 = [
+                    "/img/guitars/guitar1.jpg",
+                    "guitar",
+                    "Acustica",
+                    "Gibson",
+                    "⭐⭐⭐⭐⭐",
+                    "$ 5000 USD",
+                    "50% Off",
+                ];
+
+                let guitar2 = [
+                    "/img/guitars/guitar2.jpg",
+                    "guitar",
+                    "Electroacustica",
+                    "Vox Bobcat",
+                    "⭐⭐⭐⭐⭐",
+                    "$ 5000 USD",
+                    "30% Off",
+                ];
+
+                let guitar3 = [
+                    "/img/guitars/guitar3.jpg",
+                    "guitar",
+                    "Electrica",
+                    "Jackson",
+                    "⭐⭐⭐⭐⭐",
+                    "$ 5000 USD",
+                    "20% Off",
+                ];
+            
+                
+                let drum1 = [
+                    "/img/drums/drum1.jpg",
+                    "drum",
+                    "Percución",
+                    "Pearl",
+                    "⭐⭐⭐⭐⭐",
+                    "$ 5000 USD",
+                    "50% Off",
+                ];
+
+                let drum2 = [
+                    "/img/drums/drum3.jpg",
+                    "drum",
+                    "Electrica",
+                    "Roland",
+                    "⭐⭐⭐⭐⭐",
+                    "$ 5000 USD",
+                    "30% Off",
+                ];
+
+                let air1 = [
+                    "/img/air/clarinet.jpg",
+                    "drum",
+                    "Percución",
+                    "Yamaha",
+                    "⭐⭐⭐⭐⭐",
+                    "$ 5000 USD",
+                    "50% Off",
+                ];
+
+                let air2 = [
+                "/img/air/saxo.jpg",
+                    "drum",
+                    "Percución",
+                    "Queen",
+                    "⭐⭐⭐⭐⭐",
+                    "$ 5000 USD",
+                    "50% Off",
+                ];
+
+                let air3 = [
+                "/img/air/tuba.jpg",
+                    "drum",
+                    "Percución",
+                    "Jupiter",
+                    "⭐⭐⭐⭐⭐",
+                    "$ 5000 USD",
+                    "50% Off",
+                ];
+            </script>
+
+        </section>
+
+        <script>
+            function removeElement(){
+                let list = document.getElementsByClassName("card"); // Find the elements
+                console.log(list);
+                for(let i = list.length - 1; 0 <= i; i--)
+                if(list[i] && list[i].parentElement)
+                list[i].parentElement.removeChild(list[i]);
+            }
+
+            function removeWhiteDiv(){
+                let list2 = document.getElementsByClassName("vacio"); // Find the elements
+                console.log(list2);
+                for(let i = list2.length - 1; 0 <= i; i--)
+                if(list2[i] && list2[i].parentElement)
+                list2[i].parentElement.removeChild(list2[i]);
+            }
+
+            function createWhiteDiv(){
+                let bodyElement = document.body;
+                let cardElement = document.createElement('div');
+                cardElement.appendChild(document.createTextNode('The man who mistook his wife for a hat'));
+                cardElement.className = "vacio";
+                
+                document.body.appendChild(cardElement);
+                console.log(cardElement);
+            }
+            
+        </script>
+        </section>
+    </main>
+
+    <footer>
+        <div class="quienes-somos">
+            <a class="text-footer" href="#"> <strong>Quienes somos</strong> </a>
+        </div>
+
+        <div class="iconos-footer">
+            <div>
+                <a class="text-footer" href="#"> <strong> Seguinos</strong> </a>
+            </div>
+
+            <div class="instagram">
+                <img class="instagram" src="img/instagram.png" alt="">
+            </div>
+
+            <div class="twitter">
+                <img class="twitter" src="img/twitter.png" alt="">
+            </div>
+
+            <div class="facebook">
+                <img class="facebook" src="img/facebook.png" alt="">
+            </div>
+        </div>
+
+        <div class="parrafo-footer">
+            <p>La venta los productos publicados está sujeta a la verificación de stock. Los precios online para los
+                productos presentados/publicados en www.Clavedesol.com son válidos únicamente para la compra vía
+                internet en la presente página. © 2022 Clave de Sol All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
