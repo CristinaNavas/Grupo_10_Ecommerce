@@ -88,16 +88,303 @@ main{
 }
 
 .main1 {
-  padding: 10% 30% 10% 30%;
   width: 100%;
   text-align: center;
+  padding: 5%;
+  position: relative;
 }
 
+.iCuerdas{
+  width: 50%;
+  height:75%;
+  position: absolute;
+  right: 25%;
+  border-radius: 5%;
+  animation-name: bannerCuerda;
+  animation-duration: 20000ms;
+  animation-iteration-count: infinite;
+  
+}
+.iIdiofono{
+  width: 50%;
+  height:75%;
+  position: absolute;
+  right: 25%;
+  border-radius: 5%;
+  animation-name: bannerIdiofono;
+  animation-duration: 20000ms;
+  animation-iteration-count: infinite;
+  
+}
+.iPercusion{
+  width: 50%;
+  height:75%;
+  position: absolute;
+  right: 25%;
+  border-radius: 5%;
+  animation-name: bannerPercusion;
+  animation-duration: 20000ms;
+  animation-iteration-count: infinite;
+  
+}
+.iElectrico{
+  width: 50%;
+  height:75%;
+  position: absolute;
+  right: 25%;
+  border-radius: 5%;
+  animation-name: bannerElectrico;
+  animation-duration: 20000ms;
+  animation-iteration-count: infinite;
+  
+
+}
+.iViento{
+  width: 50%;
+  height:75%;
+  position: absolute;
+  right: 25%;
+  border-radius: 5%;
+  animation-name: bannerViento;
+  animation-duration: 20000ms;
+  animation-iteration-count: infinite;
+  
+}
+.iVientoTransparente{
+  width: 50%;
+  opacity: 0%;
+}
+/* 
+
+@keyframes bannerElectrico{
+  0% {
+    z-index: 5;
+  }
+  20% {
+    z-index: 0;
+  }
+  40% {
+    z-index: 0;
+  }
+  60% {
+    z-index: 0;
+  }
+  80% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+
+@keyframes bannerViento{
+  0% {
+    z-index: 0;
+  }
+  20% {
+    z-index: 5;
+  }
+  40% {
+    z-index: 0;
+  }
+  60% {
+    z-index: 0;
+  }
+  80% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+
+@keyframes bannerCuerda{
+  0% {
+    z-index: 0;
+  }
+  20% {
+    z-index: 0;
+  }
+  40% {
+    z-index: 5;
+  }
+  60% {
+    z-index: 0;
+  }
+  80% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+@keyframes bannerPercusion{
+  0% {
+    z-index: 0;
+  }
+  20% {
+    z-index: 0;
+  }
+  40% {
+    z-index: 0;
+  }
+  60% {
+    z-index: 5;
+  }
+  80% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+
+@keyframes bannerIdiofono{
+  0% {
+    z-index: 0;
+  }
+  20% {
+    z-index: 0;
+  }
+  40% {
+    z-index: 0;
+  }
+  60% {
+    z-index: 0;
+  }
+  80% {
+    z-index: 5;
+  }
+  100% {
+    z-index: 0;
+  }
+} */
+
+
+@keyframes bannerElectrico{
+  0% {
+    z-index: 5;
+  }
+  25% {
+    z-index: 0;
+  }
+  50% {
+    z-index: 0;
+  }
+  75% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+
+@keyframes bannerViento{
+  0% {
+    z-index: 0;
+  }
+  25% {
+    z-index: 5;
+  }
+  50% {
+    z-index: 0;
+  }
+  75% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+
+@keyframes bannerCuerda{
+  0% {
+    z-index: 0;
+  }
+  25% {
+    z-index: 0;
+  }
+  50% {
+    z-index: 5;
+  }
+  75% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+@keyframes bannerPercusion{
+  0% {
+    z-index: 0;
+  }
+  25% {
+    z-index: 0;
+  }
+  50% {
+    z-index: 0;
+  }
+  75% {
+    z-index: 5;
+  }
+  100% {
+    z-index: 0;
+  }
+}
+@keyframes bannerIdiofono{
+  0% {
+    z-index: 0;
+  }
+  25% {
+    z-index: 0;
+  }
+  50% {
+    z-index: 0;
+  }
+  75% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 5;
+  }
+}
+/* <div class="imagenCuerdas"><img src="img/cuerdas.jpg" class="iCuerdas" alt="Cuerdas"></div> */
+
+
+.imagenArticulo{
+  width:80%;
+  height:80%
+}
+.division{
+  width: 90%;
+  background-color: white;
+  padding: 5%;
+  height: 50%;
+
+}
+.precioOferta{
+  background-color: white;
+  width: 90%;
+  border-radius: 5%;
+}
 
 .guitarra2 {
   width: 80%;
   height: 70%;
 }
+
+article{
+}
+
+h3{
+  text-align: center;
+  font-size: 26px;
+  font-weight:900 ;
+  background-color: white;
+  width: 90%;
+  align-content: center;
+}
+
 
 /* +++++++++++++++++++++++++++++++++++ESTILOS FOOTER++++++++++++++++++++++++++++++++++++++++++ */
 
