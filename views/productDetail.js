@@ -1,83 +1,138 @@
-
 const products = document.querySelector(".productHolder");
 
-function createCard([img,product,category,brandName,rating,price,offer]){
+function createCard([img, product, category, brandName, rating, price, offer]) {
+  let code = `
+                    <div class="card">
+                        
+                            <img src="${img}" alt="${product}">
+                        
+                        <div class="cardText">
+                            <p class="categoryText">${category}</p>
+                            <h2 class="brandText">${brandName}</h2>
+                            <h5>${rating}</h5>
+                            <p class="priceText">${price}</p>
+                            <p class="offerText">${offer}</p>
+                        </div>
+                    </div> 
+                    `;
 
-    
-    let code =`
-    <div class="card">
-        <img src="${img}" alt="${product}">
-        <div class="cardText">
-            <p class="categoryText">${category}</p>
-            <h2 class="brandText">${brandName}</h2>
-            <h5>${rating}</h5>
-            <p class="priceText">${price}</p>
-            <p class="offerText">${offer}</p>
-        </div>
-    </div> 
-    `
-
-products.innerHTML += code;
+  products.innerHTML += code;
 }
 
-let item1 =[
-    "/img/guitar5.jpg",
-    "guitar",
-    "Electrica",
-    "Fender",
-    "⭐⭐⭐⭐⭐",
-    "$ 5000 USD",
-    "50% Off",
+let guitar1 = [
+  "/img/guitars/guitar1.jpg",
+  "guitar",
+  "Acustica",
+  "Gibson",
+  "⭐⭐⭐⭐⭐",
+  "$ 5000 USD",
+  "50% Off",
 ];
 
-let item2 =[
-    "/img/guitar5.jpg",
-    "guitar",
-    "Acistica",
-    "Fender",
-    "⭐⭐⭐⭐⭐",
-    "$ 5000 USD",
-    "30% Off",
+let guitar2 = [
+  "/img/guitars/guitar2.jpg",
+  "guitar",
+  "Electroacustica",
+  "Vox Bobcat",
+  "⭐⭐⭐⭐⭐",
+  "$ 5000 USD",
+  "30% Off",
 ];
 
-let item3 =[
-    "/img/guitar5.jpg",
-    "guitar",
-    "Ectroacustica",
-    "Fender",
-    "⭐⭐⭐⭐⭐",
-    "$ 5000 USD",
-    "20% Off",
+let guitar3 = [
+  "/img/guitars/guitar3.jpg",
+  "guitar",
+  "Electrica",
+  "Jackson",
+  "⭐⭐⭐⭐⭐",
+  "$ 5000 USD",
+  "20% Off",
+];
+
+let drum1 = [
+  "/img/drums/drum1.jpg",
+  "drum",
+  "Percución",
+  "Pearl",
+  "⭐⭐⭐⭐⭐",
+  "$ 5000 USD",
+  "50% Off",
+];
+
+let drum2 = [
+  "/img/drums/drum3.jpg",
+  "drum",
+  "Electrica",
+  "Roland",
+  "⭐⭐⭐⭐⭐",
+  "$ 5000 USD",
+  "30% Off",
+];
+
+let air1 = [
+  "/img/air/clarinet.jpg",
+  "drum",
+  "Percución",
+  "Yamaha",
+  "⭐⭐⭐⭐⭐",
+  "$ 5000 USD",
+  "50% Off",
+];
+
+let air2 = [
+  "/img/air/saxo.jpg",
+  "drum",
+  "Percución",
+  "Queen",
+  "⭐⭐⭐⭐⭐",
+  "$ 5000 USD",
+  "50% Off",
+];
+
+let air3 = [
+  "/img/air/tuba.jpg",
+  "drum",
+  "Percución",
+  "Jupiter",
+  "⭐⭐⭐⭐⭐",
+  "$ 5000 USD",
+  "50% Off",
 ];
 
 
-/* createCard(item1);
-createCard(item2);
-createCard(item3);
- */
+function removeElement(){
+    let list = document.getElementsByClassName("card"); // Find the elements
+    console.log(list);
+    for(let i = list.length - 1; 0 <= i; i--)
+    if(list[i] && list[i].parentElement)
+    list[i].parentElement.removeChild(list[i]);
+}
 
-let bodyElement = document.body;
-let cardElement = document.createElement('div');
-let imageConatainer = document.createElement('div');
-let infoContainer = document.createElement('div');
-let imageElement = document.createElement('img');
-let headingElement = document.createElement('h5');
-let paragraphElement = document.createElement('p');
-let btnElement = document.createElement('a');
+function tipo() {
+    let instrumento= document.getElementById('instrumento');
+    let myType = document.getElementById('myType');
 
-// adding classes
-cardElement.className ="card";
-imageConatainer.className = 'image-container';
-infoContainer.className = "info-container";
-imageElement.className = "image";
-headingElement.className = "heading";
-paragraphElement.className = "paragraph";
-btnElement.className = "btn";
+    myType.value = instrumento.children[instrumento.selectedIndex].getAttribute('value');
 
-
-// works the same way as the className property except it sets the source atttribute of the imageElement
-imageElement.src = "https://source.unspash..com/random";
-btnElement.setAttribute("href", "#");
-console.log(btnElement);
-
-console.log(imageConatainer);
+    console.log(myType.value);
+    if(myType.value == "cuerda"){
+        
+        removeElement()
+        createCard(guitar3);
+        createCard(guitar2);
+        createCard(guitar1);
+    } else if(myType.value == "percución"){
+        
+        removeElement()
+        createCard(drum2);
+        createCard(drum1);
+    } else if(myType.value == "aire"){
+        
+        removeElement()
+        createCard(air1);
+        createCard(air2);
+        createCard(air3);
+    } else{
+        removeElement()
+    }
+} 
