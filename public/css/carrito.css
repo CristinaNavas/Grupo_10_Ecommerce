@@ -53,10 +53,9 @@
   }
   
   .carrito {
-    padding: 0.2% 1% 0% 3%;
+    padding: 0% 1% 0% 3%;
     color: var(--hamburger-button);
     text-align: center ;
-    font-size: 130%;
   }
   
   .lupa {
@@ -359,6 +358,11 @@ main h2 {
     font-size: 130%
     
   }
+
+  .carrito {
+    font-size: 130%;
+  }
+
   .lupa {
     font-size: 130%;
     
