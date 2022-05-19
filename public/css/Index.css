@@ -21,7 +21,8 @@ body {
 
 header {
   position: relative;
-  background-image: url(../img/guitarra4.jpg);
+  background-image: url(../img/guitar.jpg);
+  background-image: url(../img/guitar5.jpg);
   background-size: 91%;
   background-position: fixed;
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -93,10 +94,9 @@ header {
 /* ==============================================Estilos MAIN======================================== */
 
 main{
- /*  background-image: url(../img/musicNotes.jpg); */
-  
-
-  background-image: url(../img/store.jpg);
+  /* background-image: url(../img/musicNotes.jpg); */
+  background-image: url(../img/fondo4.jpg);
+  /* background-color: #847a56; */
   min-height: 100%;
   
   background-position: center center; /* Center the image */
@@ -110,49 +110,55 @@ main{
 .main1 {
   width: 100%;
   text-align: center;
-  padding: 5%;
+  padding: 2%;
+ 
   position: relative;
+  margin: auto;
 }
 
 .iCuerdas{
-  width: 50%;
-  height:75%;
+  width: 90%;
+  height:80%;
   position: absolute;
-  right: 25%;
-  border-radius: 5%;
+  right: 5%;
+  top:5%;
+  border-radius: 2%;
   animation-name: bannerCuerda;
   animation-duration: 20000ms;
   animation-iteration-count: infinite;
   
 }
 .iIdiofono{
-  width: 50%;
-  height:75%;
+  width: 90%;
+  height:80%;
   position: absolute;
-  right: 25%;
-  border-radius: 5%;
+  right: 5%;
+  top:5%;
+  border-radius: 2%;
   animation-name: bannerIdiofono;
   animation-duration: 20000ms;
   animation-iteration-count: infinite;
   
 }
 .iPercusion{
-  width: 50%;
-  height:75%;
+  width: 90%;
+  height:80%;
   position: absolute;
-  right: 25%;
-  border-radius: 5%;
+  right: 5%;
+  top:5%;
+  border-radius: 2%;
   animation-name: bannerPercusion;
   animation-duration: 20000ms;
   animation-iteration-count: infinite;
   
 }
 .iElectrico{
-  width: 50%;
-  height:75%;
+  width: 90%;
+  height:80%;
   position: absolute;
-  right: 25%;
-  border-radius: 5%;
+  right: 5%;
+  top:5%;
+  border-radius: 2%;
   animation-name: bannerElectrico;
   animation-duration: 20000ms;
   animation-iteration-count: infinite;
@@ -160,11 +166,12 @@ main{
 
 }
 .iViento{
-  width: 50%;
-  height:75%;
+  width: 90%;
+  height:80%;
   position: absolute;
-  right: 25%;
-  border-radius: 5%;
+  right: 5%;
+  top:5%;
+  border-radius: 2%;
   animation-name: bannerViento;
   animation-duration: 20000ms;
   animation-iteration-count: infinite;
@@ -371,21 +378,21 @@ main{
 /* <div class="imagenCuerdas"><img src="img/cuerdas.jpg" class="iCuerdas" alt="Cuerdas"></div> */
 
 
-.imagenArticulo{
-  width:80%;
-  height:80%
-}
 .division{
   width: 90%;
   background-color: white;
   padding: 5%;
   height: 50%;
+  margin: auto;
+  border-radius: 2%;
 
 }
 .precioOferta{
   background-color: white;
   width: 90%;
-  border-radius: 5%;
+  border-radius: 2%;
+  margin: auto;
+  margin-bottom: 10%;
 }
 
 .guitarra2 {
@@ -394,17 +401,82 @@ main{
 }
 
 article{
+  width: 90%;
+  align-content: center;
+  margin:auto;
 }
 
 h3{
   text-align: center;
-  font-size: 26px;
+  font-size: 36px;
   font-weight:900 ;
-  background-color: white;
-  width: 90%;
-  align-content: center;
+  width: 100%;
+  border: 2%;
+  margin: auto;
+  padding: 2%;
 }
-
+.guitarra{
+  background-color:white;
+}
+.productosMain{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.precio{
+  padding: 3%;
+  font-weight:900;
+}                       
+.oferta{
+  padding-left: 4%;
+  font-weight:900;
+  font-size: 18px;
+  color: orange;
+}
+.articulo{
+  padding: 3%;
+  font-size: 20px;
+  font-weight: 999;
+}
+.imagenArticulo{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.informacion{
+  margin:auto;
+  position: relative;
+  margin-top: 1px;
+}
+.guitarraIcono{
+  font-size: 36px;
+  position:absolute;
+  left: 80%;
+  top:-15%;
+  color: #524a21;
+}
+.boton{
+  margin-left: 30%;
+  margin-bottom: 5%;
+  width: 40%;
+  color:#524a2f;
+  padding: 2%;
+  border: none;
+  
+}
+.botonD{
+  display: none;
+}
+article:hover .botonD{
+  display: block;
+  
+}
+article:hover .guitarraIcono{
+  transform: rotate(45deg);
+}
 
 /* +++++++++++++++++++++++++++++++++++ESTILOS FOOTER++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -501,6 +573,11 @@ footer {
     font-size: 10px;
     padding: 5% 5% 4% 2%;
   }
+
+  article{
+    width: 40%;
+    align-content: center;
+  }
 }
 
 /* ****************************************DESKTOP*********************************** */
@@ -562,6 +639,10 @@ footer {
   .main-navbar li {
     padding-right: 8%;
     margin-left: 7px;
+  }
+  article{
+    width: 23%;
+    align-content: center;
   }
 
  
