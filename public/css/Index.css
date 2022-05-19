@@ -53,10 +53,10 @@ header {
 }
 
 .carrito {
-  padding: 0.2% 1% 0% 3%;
+  padding: 0% 1% 0% 3%;
   color: var(--hamburger-button);
   text-align: center ;
-  font-size: 130%;
+  /* font-size: 130%; */
 }
 
 .lupa {
@@ -244,6 +244,9 @@ footer {
       color: var(--header);
       
     }
+    .carrito:hover{
+      color: var(--header);
+    }
   .ingreso {
     font-size: 130%;
     
@@ -255,6 +258,9 @@ footer {
   .lupa {
     font-size: 130%;
     
+  }
+  .carrito{
+    font-size: 130%;
   }
 
   .nabvar-tablet {

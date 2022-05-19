@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
     <!-- **************************link iconos Awesome********************** -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/51cbd52192.js" crossorigin="anonymous"></script>
 
     
     <script defer src="./productDetail.js" type="text/javascript" language='javascript'></script>
@@ -21,28 +22,35 @@
 
 <body>
     <header>
-        <div class="top-header">
-            <div>
-                <a href="/"><img class="logo" src="img/claveLogo.jpg" alt="logo Clave de sol"></a>
+        <header>
+            <div class="top-header">
+                <div>
+                    <a href="/"><img class="logo" src="img/claveLogo.jpg" alt="logo Clave de sol"></a>
+                </div>
+    
+                <div class="ingreso">
+                    <p class="header-text"><a href="/login"> <i class="fas fa-sign-in-alt ingreso  "></i></a></p>
+                </div>
+    
+                <div class="registro">
+                    <p class="header-text"><a href="/register"><i class="fas fa-user-plus registro  "></i> </a></p>
+                </div>
+    
+                <div class="carrito">
+                    <p class="header-text"><a href="/carrito"><i class="fa-solid fa-cart-shopping carrito"></i></a></p>
+       
+                </div>
+                
+    
+                <div class="lupa">
+                    <p class="header-text"><a href="#"><i class="fas fa-search lupa "></i></a></p>
+                </div>
             </div>
-
-            <div class="ingreso">
-                <p class="header-text"><a href="/login"> <i class="fas fa-sign-in-alt ingreso  "></i></a></p>
-            </div>
-
-            <div class="registro">
-                <p class="header-text"><a href="/register"><i class="fas fa-user-plus registro  "></i> </a></p>
-            </div>
-
-            <div class="lupa">
-                <p class="header-text"><a href="#"><i class="fas fa-search lupa "></i></a></p>
-            </div>
-        </div>
        <div class ="nabvar-tablet">
         <nav class="main-navbar">
             <ul>
               <li><a href="#"> <strong>Ofertas</strong> </a></li>
-              <li> <a href="/productCart"><strong>Tienda Online</strong></a></li>
+              <li> <a href="/carrito"><strong>Tienda Online</strong></a></li>
               <li><a href="/productdetail"><strong>Productos</strong></a></li>
            </ul>
             </nav>
@@ -142,7 +150,7 @@
                             <h5>${rating}</h5>
                             <p class="priceText">${price}</p>
                             <p class="offerText">${offer}</p>
-                            <a href="/productCart" class="btn"> Añadir al carrito </a>
+                            <a href="/carrito" class="btn"> Añadir al carrito </a>
                         </div>
                         
                     </div> 
