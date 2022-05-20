@@ -21,8 +21,8 @@ body {
 
 header {
   position: relative;
-  background-image: url(../img/guitar.jpg);
-  background-image: url(../img/guitar5.jpg);
+  background-image: url(../img/guitarra2.jpg);
+  /* background-image: url(../img/guitar5.jpg); */
   background-size: 91%;
   background-position: fixed;
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -181,111 +181,6 @@ main{
   width: 50%;
   opacity: 0%;
 }
-/* 
-
-@keyframes bannerElectrico{
-  0% {
-    z-index: 5;
-  }
-  20% {
-    z-index: 0;
-  }
-  40% {
-    z-index: 0;
-  }
-  60% {
-    z-index: 0;
-  }
-  80% {
-    z-index: 0;
-  }
-  100% {
-    z-index: 0;
-  }
-}
-
-@keyframes bannerViento{
-  0% {
-    z-index: 0;
-  }
-  20% {
-    z-index: 5;
-  }
-  40% {
-    z-index: 0;
-  }
-  60% {
-    z-index: 0;
-  }
-  80% {
-    z-index: 0;
-  }
-  100% {
-    z-index: 0;
-  }
-}
-
-@keyframes bannerCuerda{
-  0% {
-    z-index: 0;
-  }
-  20% {
-    z-index: 0;
-  }
-  40% {
-    z-index: 5;
-  }
-  60% {
-    z-index: 0;
-  }
-  80% {
-    z-index: 0;
-  }
-  100% {
-    z-index: 0;
-  }
-}
-@keyframes bannerPercusion{
-  0% {
-    z-index: 0;
-  }
-  20% {
-    z-index: 0;
-  }
-  40% {
-    z-index: 0;
-  }
-  60% {
-    z-index: 5;
-  }
-  80% {
-    z-index: 0;
-  }
-  100% {
-    z-index: 0;
-  }
-}
-
-@keyframes bannerIdiofono{
-  0% {
-    z-index: 0;
-  }
-  20% {
-    z-index: 0;
-  }
-  40% {
-    z-index: 0;
-  }
-  60% {
-    z-index: 0;
-  }
-  80% {
-    z-index: 5;
-  }
-  100% {
-    z-index: 0;
-  }
-} */
 
 
 @keyframes bannerElectrico{
@@ -534,7 +429,7 @@ footer {
 /* 
 ****************************************TABLET*********************************** */
 
-@media (min-width: 425px) {
+@media (min-width: 426px) {
   .hamburger-button {
     display: none;
   }
