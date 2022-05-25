@@ -31,12 +31,13 @@ header {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  padding: 2%;
   width: 100%;
+  padding-bottom: 0%;
+  padding-top:2%
 }
 
 .logo {
-  width: 25%;
+  width: 50%;
   border: solid 2px #524a2f;
   border-radius: 50%;
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -83,8 +84,8 @@ header {
   font-size: 16px;
   margin: auto;
   position: absolute;
-  left: 20%;
-  bottom: -10%;
+  left: 85%;
+  bottom: -9%;
 }
 
 .barra {
@@ -430,6 +431,15 @@ footer {
 ****************************************TABLET*********************************** */
 
 @media (min-width: 426px) {
+  .top-header{
+    padding: 2% 2% 11% 1%;
+  }
+  .logo{
+    position: absolute;
+    width: 17%;
+    left:6%
+  }
+
   .hamburger-button {
     display: none;
   }
@@ -445,7 +455,6 @@ footer {
     width: 100%;
     
   }
-
   .main-navbar ul {
     display: flex;
     width: 100%;
@@ -478,17 +487,17 @@ footer {
 /* ****************************************DESKTOP*********************************** */
 
 @media (min-width: 769px) {
+  .top-header{
+    padding-bottom: 9%;
+    padding-top:1%;
+  }
+  .logo{
+    position: absolute;
+    width: 17%;
+    left:6%
+   }
   
-    .logo{
-      position: absolute;
-      width: 16%;
-      left:6%
-    }
-  
-    .top-header{
-      padding-bottom: 12%;
-      padding-top:3%
-    }
+
  
 
     .ingreso:hover {
@@ -580,5 +589,7 @@ footer {
 
 }
 
+@media (min-width: 1201px) {
 
+}
 
