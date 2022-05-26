@@ -1,0 +1,60 @@
+<%- include("./partials/head") %>
+
+<body>
+    <%- include("./partials/header") %>
+
+    <main>
+
+        <h2>Carrito</h2>
+
+
+        <div class="contenedor-padre">
+
+            <label class="label-producto" for="producto">Producto</label>
+
+            <div class="visor-producto"></div>
+
+            
+            <div class="btn-más">
+                <button class="btn-más">+</button>
+            </div>
+
+            <div class="div-núnero-de-productos">
+                <input class="núnero-de-productos" type="text" name="" id="">
+            </div>
+
+            <div class="btn-menos">
+                <button class="btn-menos">-</button>
+            </div>
+
+        </div>
+
+
+        <div class="div-btn-quitar-último">
+            <button class="btn-quitar-último">Quitar último producto</button> 
+          </div>
+
+          <div class="div-btn-vaciar-carrito">
+            <button class="btn-vaciar-carrito">Vaciar carrito</button> 
+          </div>
+
+
+        <div class="total-de-carrito">
+                <span class="span-total">Total carrito $<input class="input-total" type="text" name="" id=""></span>
+        </div>
+
+
+        <div class="div-btn-finalizar-compra">
+            <button class="btn-finalizar-compra">Finalizar compra</button>
+        </div>
+
+
+    </main>
+
+    <%- include("./partials/footer") %>
+</body>
+
+</html>
+
+    
+    
