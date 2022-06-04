@@ -1,15 +1,12 @@
 [
     {
       "id": 1,
-<<<<<<< HEAD
       "name": "Acordeón",
       "description": "Nuevo de paquete",
       "image": "/image_acordeon.jpg",
-=======
       "name": "trompeta",
       "description": "Trompeta Yahama YTR-6335 con campana de cobre dorado",
       "image": "trompeta-yamaha.png",
->>>>>>> 72deb50178dc449c89df719b23f6415d931211f0
       "category ": "visto",
       "type": "viento",
       "price": 562.000,
