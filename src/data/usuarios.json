@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "firstName": "Leo",
+    "lastName": "Lara",
+    "email": "leo.lara@hotmail.com",
+    "password": "leo2520",
+    "category": "vendedor",
+    "image": "usuario_leo"
+  }, {
+    "id": 2,
+    "firstName": "Keven",
+    "lastName": "",
+    "email": null,
+    "password": null,
+    "category": null,
+    "image": null
+  }, {
+    "id": 3,
+    "firstName": "Englebert",
+    "lastName": null,
+    "email": null,
+    "password": null,
+    "category": null,
+    "image": null
+  }, {
+    "id": 4,
+    "firstName": "Paton",
+    "lastName": null,
+    "email": null,
+    "password": null,
+    "category": null,
+    "image": null
+  }, {
+    "id": 5,
+    "firstName": "Krista",
+    "lastName": null,
+    "email": null,
+    "password": null,
+    "category": null,
+    "image": null
+  }
+]
