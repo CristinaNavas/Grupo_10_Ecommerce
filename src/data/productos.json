@@ -1,49 +1,49 @@
 [
     {
       "id": 1,
-      "name": "Acordeón",
-      "description": "Nuevo de paquete",
-      "image": "image_acordeon.jpg",
+      "name": "trompeta",
+      "description": "Trompeta Yahama YTR-6335 con campana de cobre dorado",
+      "image": "trompeta-yamaha.png",
       "category ": "visto",
       "type": "viento",
-      "price": 11020.39,
-      "discount": 10
+      "price": 562.000,
+      "discount": 15
     }, {
       "id": 2,
-      "name": "Willy",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 10427.71,
-      "discount": 10
+      "name": "Saxofon",
+      "description": "Saxo Alto Parquer Custom De Estudio Con Estuche",
+      "image": "saxofon.png",
+      "category ": "visto",
+      "type": "viento",
+      "price": 93934,
+      "discount": 20
     }, {
       "id": 3,
-      "name": "Reider",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 10842.39,
-      "discount": 10
+      "name": "clarinete",
+      "description": "clarinete Ocen OCL190 con 17 llaves",
+      "image": "clarinete-ocean",
+      "category ": "visto",
+      "type": "viento",
+      "price": 27.000,
+      "discount": 25
     }, {
       "id": 4,
-      "name": "Shaw",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 11101.18,
-      "discount": 10
+      "name": "tuba",
+      "description": "Tuba Yamaha YBB 104",
+      "image": "tuba.png",
+      "category ": "visto",
+      "type": "viento",
+      "price": 400.000,
+      "discount": 20
     }, {
       "id": 5,
-      "name": "Gary",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 10426.65,
-      "discount": 10
+      "name": "flauta traversa",
+      "description": "flauta traversa en Do cerrada-plata",
+      "image": "flauta-traversa.png",
+      "category ": "visto",
+      "type": "viento",
+      "price": 35.000,
+      "discount": 20
     }, {
       "id": 6,
       "name": "",
