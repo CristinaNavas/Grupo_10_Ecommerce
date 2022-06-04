@@ -3,7 +3,7 @@
       "id": 1,
       "name": "Acordeón",
       "description": "Nuevo de paquete",
-      "image": "/image_acordeon",
+      "image": "image_acordeon.jpg",
       "category ": "visto",
       "type": "viento",
       "price": 11020.39,
@@ -178,96 +178,6 @@
       "category ": null,
       "type": null,
       "price": 10554.1,
-      "discount": 10
-    }, {
-      "id": 21,
-      "name": "Heriberto",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 10339.55,
-      "discount": 10
-    }, {
-      "id": 22,
-      "name": "Lana",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 10815.1,
-      "discount": 10
-    }, {
-      "id": 23,
-      "name": "Cyndi",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 10825.53,
-      "discount": 10
-    }, {
-      "id": 24,
-      "name": "Keane",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 11117.54,
-      "discount": 10
-    }, {
-      "id": 25,
-      "name": "Fleur",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 10464.51,
-      "discount": 10
-    }, {
-      "id": 26,
-      "name": "Luise",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 10860.14,
-      "discount": 10
-    }, {
-      "id": 27,
-      "name": "Ruthy",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 10886.32,
-      "discount": 10
-    }, {
-      "id": 28,
-      "name": "Nikolos",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 10464.98,
-      "discount": 10
-    }, {
-      "id": 29,
-      "name": "Yolande",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 10563.24,
-      "discount": 10
-    }, {
-      "id": 30,
-      "name": "Cheston",
-      "description": null,
-      "image": null,
-      "category ": null,
-      "type": null,
-      "price": 10817.7,
       "discount": 10
     }
 ]
