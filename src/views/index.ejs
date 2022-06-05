@@ -17,129 +17,27 @@
             <h3>Productos en Oferta</h3>
             <div class="productosMain">
                 <% producto.forEach(i => { %>
-                    
-                        <article>
+                      
+                    <section class="articleBox">
                         <a href="/productDetail/<%= i.id%>">
-                        <div class="division"><img class="imagenArticulo" src=<%= i.foto%> alt=<%= i.nombre %>></div>
-                        <div class="informacion">
-                            <div><i class="fa-solid fa-guitar guitarraIcono"></i></div>
-                            <div class="precioOferta">
-                                <p class="precio"><%= i.precio %></p>
-                                <p class="oferta"><%= i.oferta %></p>
-                                <p class="articulo"><%= i.nombre %></p>
-                                <div class="botonD"><button class="boton">Comprar</button></div>
-                            </div>
                             
-                        </div>
+                                <div class="division"><img class="imagenArticulo" src="/img/main/<%= i.image%>" alt=<%= i.name %>></div>
+                                <div class="informacion">
+                                    <div><i class="fa-solid fa-guitar guitarraIcono"></i></div>
+                                    <div class="precioOferta">
+                                        <p class="precio"><%= i.price %></p>
+                                        <p class="oferta"><%= i.discount %></p>
+                                        <p class="articulo"><%= i.name %></p>
+                                        <div class="botonD"><button class="boton">Comprar</button></div>
+                                    </div>
+
+                                </div>
+                           
                         </a>
-                        </article>
+                    </section>
+                
                 <% }); %>
                 
-
-                <!-- <article>
-                    <div class="division"><img class="imagenArticulo" src="img/main/acordeon.png" alt="Acordeon"></div>
-                    <div class="informacion">
-                        <div><i class="fa-solid fa-guitar guitarraIcono"></i></div>
-                        <div class="precioOferta">
-                            <p class="precio">$300</p>
-                            <p class="oferta">10% off</p>
-                            <p class="articulo">Acordeón</p>
-                            <div class="botonD"><button class="boton">Comprar</button></div>
-                        </div>
-                        
-                    </div>
-                </article>
-                <article>
-                    <div class="division"><img class="imagenArticulo" src="img/main/main_bateria2.png" alt="Batería"></div>
-                    <div class="informacion">
-                        <div><i class="fa-solid fa-guitar guitarraIcono"></i></div>
-                        <div class="precioOferta">
-                            <p class="precio">$200</p>
-                            <p class="oferta">10% off</p>
-                            <p class="articulo">Batería</p>
-                            <div class="botonD"><button class="boton">Comprar</button></div>
-                        </div>
-                        
-                    </div>
-                </article>
-                <article>
-                    <div class="division"><img class="imagenArticulo" src="img/main/main_guitarra1.png" alt="Guitarra clásica"></div>
-                    <div class="informacion">
-                        <div><i class="fa-solid fa-guitar guitarraIcono"></i></div>
-                        <div class="precioOferta">
-                            <p class="precio">$100</p>
-                            <p class="oferta">10% off</p>
-                            <p class="articulo">Guitarra</p>
-                            <div class="botonD"><button class="boton">Comprar</button></div>
-                        </div>
-                        
-                    </div>
-                </article>
-                <article>
-                    <div class="division"><img class="imagenArticulo" src="img/main/main_trombon.png" alt="Trombon"></div>
-                    <div class="informacion">
-                        <div><i class="fa-solid fa-guitar guitarraIcono"></i></div>
-                        <div class="precioOferta">
-                            <p class="precio">$10</p>
-                            <p class="oferta">5% off</p>
-                            <p class="articulo">Trombón</p>
-                            <div class="botonD"><button class="boton">Comprar</button></div>
-                        </div>
-                        
-                    </div>
-                </article>
-                <article>
-                    <div class="division"><img class="imagenArticulo" src="img/main/main_violin.png" alt="Violín"></div>
-                    <div class="informacion">
-                        <div><i class="fa-solid fa-guitar guitarraIcono"></i></div>
-                        <div class="precioOferta">
-                            <p class="precio">$10</p>
-                            <p class="oferta">5% off</p>
-                            <p class="articulo">Violín</p>
-                            <div class="botonD"><button class="boton">Comprar</button></div>
-                        </div>
-                        
-                    </div>
-                </article>
-                <article>
-                    <div class="division"><img class="imagenArticulo" src="img/main/platillos.png" alt="Platillos"></div>
-                    <div class="informacion">
-                        <div><i class="fa-solid fa-guitar guitarraIcono"></i></div>
-                        <div class="precioOferta">
-                            <p class="precio">$10</p>
-                            <p class="oferta">5% off</p>
-                            <p class="articulo">Platillosn</p>
-                            <div class="botonD"><button class="boton">Comprar</button></div>
-                        </div>
-                        
-                    </div>
-                </article>
-                <article>
-                    <div class="division"><img class="imagenArticulo" src="img/main/trompeta.jpg" alt="Trompeta"></div>
-                    <div class="informacion">
-                        <div><i class="fa-solid fa-guitar guitarraIcono"></i></div>
-                        <div class="precioOferta">
-                            <p class="precio">$10</p>
-                            <p class="oferta">5% off</p>
-                            <p class="articulo">Trompeta</p>
-                            <div class="botonD"><button class="boton">Comprar</button></div>
-                        </div>
-                        
-                    </div>
-                </article>
-                <article>
-                    <div class="division"><img class="imagenArticulo" src="img/main/bateria_main.jpg" alt="Batería"></div>
-                    <div class="informacion">
-                        <div><i class="fa-solid fa-guitar guitarraIcono"></i></div>
-                        <div class="precioOferta">
-                            <p class="precio">$10</p>
-                            <p class="oferta">5% off</p>
-                            <p class="articulo">Batería Eléctrica</p>
-                            <div class="botonD"><button class="boton">Comprar</button></div>
-                        </div>
-                        
-                    </div>
-                </article> -->
             </div>
         </section>
 
