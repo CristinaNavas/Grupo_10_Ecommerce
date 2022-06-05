@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "firstName": "Leo",
+      "lastName": "Lara",
+      "email": "leo.lara@hotmail.com",
+      "password": "leo2520",
+      "category": "vendedor",
+      "image": "usuario_leo"
+    }, {
+      "id": 2,
+      "firstName": "Pablo",
+      "lastName": "Perez",
+      "email": "p.perez@hotmail.com",
+      "password": "perez-234",
+      "category": "vendedor",
+      "image": "usuario_pablo"
+    }, {
+      "id": 3,
+      "firstName": "Luis",
+      "lastName": "Rosas",
+      "email": "lrosas@yahoo.com.ar",
+      "password": "luis_4567",
+      "category": "vendedor",
+      "image": "usuario_luis"
+    }, {
+      "id": 4,
+      "firstName": "Cristina",
+      "lastName": "Rodriguez",
+      "email": "cris_rodri@gmail.com",
+      "password": "cris9876",
+      "category": "comprador",
+      "image": "usuario_cris"
+    }, {
+      "id": 5,
+      "firstName": "Oscar",
+      "lastName": "Ramirez",
+      "email": "oscar_rami234@gmail.com",
+      "password": "osqui4536",
+      "category": "comprador",
+      "image": "usuario_oscar"
+    }
+  ]
