@@ -279,7 +279,9 @@ main{
 }
 /* <div class="imagenCuerdas"><img src="img/cuerdas.jpg" class="iCuerdas" alt="Cuerdas"></div> */
 
-
+p{
+  text-decoration: none;
+}
 .division{
   width: 90%;
   background-color: white;
@@ -309,6 +311,11 @@ main{
   align-content: center;
   margin:auto;
 }
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
 
 h3{
   text-align: center;
@@ -334,6 +341,7 @@ h3{
 .precio{
   padding: 3%;
   font-weight:900;
+  text-decoration: none;
 }                       
 .oferta{
   padding-left: 4%;
@@ -375,11 +383,11 @@ h3{
 .botonD{
   display: none;
 }
-article:hover .botonD{
+.articleBox:hover .botonD{
   display: block;
   
 }
-article:hover .guitarraIcono{
+.articleBox:hover .guitarraIcono{
   transform: rotate(45deg);
 }
 
