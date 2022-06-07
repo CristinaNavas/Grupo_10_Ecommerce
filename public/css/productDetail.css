@@ -146,6 +146,6 @@ section{
 
 @media(min-width: 768px){
     .articulo,  .formulario-instrumentos {
-        width: 30%;  
+        width: 80%;  
     }
 }
