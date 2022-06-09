@@ -49,3 +49,5 @@
 - Mejora de las rutas.
 - Se usó archivos JSON para el manejo de datos.
 - Se borró los comentarios excesivos en cada archivo.
+- Se crearon carpetas que separan las views de productos, usuarios y main.
+ 
