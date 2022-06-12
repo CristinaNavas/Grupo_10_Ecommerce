@@ -1,82 +1,48 @@
+const fs = require('fs');
+const path = require('path');
+const { privateDecrypt } = require('crypto');
+
+const productsFilePath = path.join(__dirname, '../data/productos.json');
 
 const controller={
     carrito: (req,res)=>{
         res.render("carrito");
     },
-    productDetail: (req,res)=>{
-        res.render("productDetail");
+    productos: (req,res) => {
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render("products",{"producto":products});
     },
-    productDetail2: (req,res)=>{
-        ///Array
-        const productos=[
-            {
-                id:1,
-                precio:250,
-                nombre:"Acordeón",
-                oferta:"10%",
-                foto: "/img/main/acordeon.png",
-            },
-            {
-                id:2,
-                precio:25,
-                nombre:"Batería",
-                oferta:"10%",
-                foto: "/img/main/main_bateria2.png",
-            },
-            {
-                id:3,
-                precio:125,
-                nombre:"Guitarra",
-                oferta:"10%",
-                foto: "/img/main/main_guitarra1.png",
-            },
-            {
-                id:4,
-                precio:125,
-                nombre:"Trombón",
-                oferta:"10%",
-                foto: "/img/main/main_trombon.png",
-            },
-            {
-                id:5,
-                precio:125,
-                nombre:"Platillos",
-                oferta:"10%",
-                foto: "/img/main/platillos.png",
-            },
-            {
-                id:6,
-                precio:125,
-                nombre:"Trompeta",
-                oferta:"10%",
-                foto: "/img/main/trompeta.jpg",
-            },
-            {
-                id:7,
-                precio:125,
-                nombre:"Violín",
-                oferta:"10%",
-                foto: "/img/main/main_violin.png",
-            },
-            {
-                id:8,
-                precio:125,
-                nombre:"Timbal",
-                oferta:"10%",
-                foto: "img/main/main_timbal.png",
-            },
-        ]
-
+    productDetail: (req,res)=>{
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         let productId=req.params.id;
-
-        console.log(productId)
-        let producto = productos.find(item =>{
-            return item.id == productId;
-        });
-       
-        console.log(producto);
-
-        res.render("productDetail", {producto:producto});
+        
+        let productoDetalle=products.find(prod=>{
+            return prod.id==productId;
+        })
+        res.render("productDetail",{"producto":productoDetalle});
+    },
+    productCreate:(req,res)=>{
+        res.render("productCreate")
+    },
+    productSave:(req,res)=>{
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        
+        let idMax=products.reduce((accumulador, currentValue)=>{
+            return (accumulador.id<currentValue.id ? accumulador.id:currentValue.id )
+        })
+        let newProducto={
+            "id":idMax+1,
+            "name": req.body.name,
+            "price":req.body.name,
+            "description": req.body.description,
+            "image": req.file.filename,
+            "category ": req.body.category,
+            "type": req.body.type,
+            "discount": req.body.discount,
+        }
+        products.push(newProducto);
+        fs.writeFileSync(productsFilePath,JSON.stringify(products,null, " "))
+		res.redirect("/");
     }
 }
 module.exports=controller

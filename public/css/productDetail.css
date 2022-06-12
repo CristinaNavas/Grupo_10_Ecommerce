@@ -1,4 +1,4 @@
-@import url(Index.css);
+/* @import url(index.css); */
 
 
 main .container{
@@ -146,6 +146,6 @@ section{
 
 @media(min-width: 768px){
     .articulo,  .formulario-instrumentos {
-        width: 30%;  
+        width: 80%;  
     }
 }
