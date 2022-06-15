@@ -11,6 +11,10 @@ const controller={
     carrito: (req,res)=>{
         res.render("carrito");
     },
+    productos: (req,res) => {
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        res.render("products",{"producto":products});
+    },
     productDetail: (req,res)=>{
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         let productId=req.params.id;

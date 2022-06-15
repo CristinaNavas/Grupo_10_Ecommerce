@@ -23,6 +23,8 @@ const productosController=require("../controller/productosController.js");
 
 router.get("/carrito",productosController.carrito);
 
+router.get("/products", productosController.productos);
+
 router.get("/productDetail/:id",productosController.productDetail);
 //Rutas crear
 router.get("/productCreate",productosController.productCreate);
