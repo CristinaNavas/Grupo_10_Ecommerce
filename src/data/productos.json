@@ -10,16 +10,6 @@
   "discount": 15
  },
  {
-  "id": 2,
-  "name": "Saxofon",
-  "description": "Saxo Alto Parquer Custom De Estudio Con Estuche",
-  "image": "saxofon.png",
-  "category ": "visto",
-  "type": "viento",
-  "price": 93934,
-  "discount": 20
- },
- {
   "id": 3,
   "name": "clarinete",
   "description": "clarinete Ocen OCL190 con 17 llaves",
@@ -180,16 +170,6 @@
   "discount": 10
  },
  {
-  "id": 19,
-  "name": "Ukelele",
-  "description": "Nuevo",
-  "image": "ukelele.jpg",
-  "category ": "visto",
-  "type": "cuerda",
-  "price": 10560.69,
-  "discount": 10
- },
- {
   "id": 20,
   "name": "Guitarra",
   "description": "Nuevo",
@@ -198,14 +178,5 @@
   "type": "cuerda",
   "price": 10554.1,
   "discount": 10
- },
- {
-  "id": 21,
-  "name": "Guitarra",
-  "price": "Guitarra",
-  "image": "file-1654655508937.PNG",
-  "category ": "in-sale",
-  "type": "cuerdas",
-  "discount": "1"
  }
 ]

@@ -5,19 +5,6 @@
     <main class="container">
 
         <section class="principal">
-
-  <!--           <form action="/" class="formulario-instrumentos" onchange="javascript:tipo()">
-                <label for="instrumento">Elige un tipo:</label>
-                
-                <select id="instrumento" name="instrumento">
-                <option value="" disabled selected>Elige un Tipo</option>
-                <option value="cuerda">Cuerda</option>
-                <option value="percución">Percución</option>
-                <option value="aire">Aire</option>
-                <option value="empty">Empty</option>
-                </select>
-                <input type="submit" value="buscar">
-            </form> -->
             
             <div class="productosMain">
                 <article>
@@ -28,7 +15,13 @@
                             <p class="precio">$<%= producto.price%></p>
                             <p class="oferta"><%= producto.discount%>% off</p>
                             <p class="articulo"><%= producto.name%></p>
-                            <div><button class="boton">Comprar</button></div>
+                            <div><button class="boton"><a href="/productos/carrito/">Comprar</a></button></div>
+                            <div><button class="boton"><a href="/productos/productEdit/<%= producto.id%>">Editar</a></button></div>
+                            
+                            <form action="/productos/productDelete/<%= producto.id %>?_method=DELETE" method="POST">
+                                <div><button class="boton2" type="submit">Eliminar</button></div>
+                            </form>
+                            
                         </div>
                     </div>
                 </article>

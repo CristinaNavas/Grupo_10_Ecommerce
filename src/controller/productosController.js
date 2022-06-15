@@ -5,6 +5,9 @@ const { privateDecrypt } = require('crypto');
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 
 const controller={
+    productos: (req,res)=>{
+
+    },
     carrito: (req,res)=>{
         res.render("carrito");
     },
@@ -39,6 +42,46 @@ const controller={
         products.push(newProducto);
         fs.writeFileSync(productsFilePath,JSON.stringify(products,null, " "))
 		res.redirect("/");
+    },
+    productEdit:(req,res)=>{
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let idProducto = req.params.id;
+
+        let productToEdit = products.find(item =>{
+            return item.id == idProducto;
+        });
+
+        res.render('productEdit', {productToEdit:productToEdit})
+     
+    },
+    productModify:(req,res)=>{
+        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        
+        let productoAModificar=req.params.id;
+
+        let productoEdit= products.find(prod=>{
+            return prod.id==productoAModificar;
+        })
+        let editedProduct={
+			id: req.params.id,
+			name: req.body.name,
+			description: req.body.description,
+			price: req.body.price,
+			discount: req.body.discount,
+			image: req.file? req.file.filename:productoEdit.image,
+			category: req.body.category
+		}
+        let indice=products.findIndex(product=>product.id==req.params.id)
+        products[indice]=editedProduct;
+  
+        fs.writeFileSync(productsFilePath,JSON.stringify(products,null, " "))
+		res.redirect("/");
+    },
+    destroy : (req, res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        let finalProducts = products.filter(product => product.id != req.params.id);
+        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
+        res.redirect('/');
     }
 }
 module.exports=controller
