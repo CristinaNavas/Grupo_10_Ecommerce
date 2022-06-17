@@ -17,6 +17,7 @@ body {
   background-color: #ebebeb;
 }
 
+
 /* ++++++++++++++++++++++++++Estilos header++++++++++++++++++++++++++++++++++++++++++ */
 
 /* header {
@@ -93,10 +94,8 @@ body {
 
 /* *************** Estilos Main ******************* */
 
-.form {
-  padding: 4% 15%;
-  margin: center;
-}
+
+
 
 .control-form {
   margin-bottom: 5%;
@@ -379,12 +378,12 @@ padding: 4% 3% 2% 4%;
   }
   
   .button-login:hover {
-    background-color: #0022aa;
+    background-color:#524a2f;
     color: white;
   }
 
-  .olvido-contarseña{
+  .olvido-contrasenia{
     text-align: center;
-    
-    
+    font-size: 18px;
+        
   }
