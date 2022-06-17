@@ -93,12 +93,12 @@
   
 /* *************** Estilos Main ******************* */
 form {
-     padding: 4% 15%;
-     margin: center;
+  padding: 4% 1%;
+  margin: center;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .nombreYapellido {
@@ -361,10 +361,11 @@ footer {
   }
 }
 
+
 /* ****************************************DESKTOP*********************************** */
 
 @media (min-width: 769px) {
-  
+
     .logo{
       position: absolute;
       width: 16%;

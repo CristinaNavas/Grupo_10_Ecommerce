@@ -19,7 +19,7 @@
                 <% producto.forEach(i => { %>
                       
                     <section class="articleBox article">
-                        <a href="/productos/productDetail/<%= i.id%>">
+                        <a href="/productos/detail/<%= i.id%>">
                             
                                 <div class="division"><img class="imagenArticulo" src="/img/main/<%= i.image%>" alt=<%= i.name %>></div>
                                 <div class="informacion">
@@ -28,7 +28,7 @@
                                         <p class="precio">$ <%= i.price %></p>
                                         <p class="oferta">-<%= i.discount %>%</p>
                                         <p class="articulo"><%= i.name %></p>
-                                        <div class="botonD"><button class="boton">Comprar</button></div>
+                                        <p class="botonD">Click para mas información</p>
                                     </div>
 
                                 </div>

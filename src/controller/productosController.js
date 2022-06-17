@@ -5,9 +5,7 @@ const { privateDecrypt } = require('crypto');
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 
 const controller={
-    productos: (req,res)=>{
-
-    },
+  
     carrito: (req,res)=>{
         res.render("carrito");
     },

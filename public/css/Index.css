@@ -389,12 +389,19 @@ h3{
   border: none;
   
 }
+
+:hover.boton2{
+  color:#847a56;  
+}
 .botonD{
   display: none;
+  text-align: center;
+  font-size: 12px;
+  color: #847a56;
+  padding-bottom: 5px;
 }
 .articleBox:hover .botonD{
   display: block;
-  
 }
 .articleBox:hover .guitarraIcono{
   transform: rotate(45deg);

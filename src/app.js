@@ -28,5 +28,5 @@ app.use("/",mainRoute);
 
 app.use("/productos",productosRoute);
 
-app.use("/usuarios",usuariosRoute);
+app.use("/",usuariosRoute);
 

@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "name": "trompeta",
+    "name": "Trompeta",
     "description": "Trompeta Yahama YTR-6335 con campana de cobre dorado",
     "image": "trompeta-yamaha.png",
-    "category ": "visto",
+    "category": "oferta",
     "type": "viento",
     "price": 562.000,
     "discount": 15
@@ -13,34 +13,34 @@
     "name": "Saxofon",
     "description": "Saxo Alto Parquer Custom De Estudio Con Estuche",
     "image": "saxofon.png",
-    "category ": "visto",
+    "category": "visto",
     "type": "viento",
     "price": 93934,
     "discount": 20
   }, {
     "id": 3,
-    "name": "clarinete",
-    "description": "clarinete Ocen OCL190 con 17 llaves",
+    "name": "Clarinete",
+    "description": "Clarinete Ocen OCL190 con 17 llaves",
     "image": "clarinet.jpg",
-    "category ": "visto",
+    "category": "oferta",
     "type": "viento",
     "price": 27.000,
     "discount": 25
   }, {
     "id": 4,
-    "name": "tuba",
+    "name": "Tuba",
     "description": "Tuba Yamaha YBB 104",
     "image": "tuba.jpg",
-    "category ": "visto",
+    "category": "visto",
     "type": "viento",
     "price": 400.000,
     "discount": 20
   }, {
     "id": 5,
-    "name": "flauta traversa",
-    "description": "flauta traversa en Do cerrada-plata",
+    "name": "Flauta traversa",
+    "description": "Flauta traversa en Do cerrada-plata",
     "image": "flauta-traversa.png",
-    "category ": "visto",
+    "category": "oferta",
     "type": "viento",
     "price": 35.000,
     "discount": 20
@@ -49,7 +49,7 @@
     "name": "Batería-Odery",
     "description": "Batería de viaje Odery Cafe Kit: Bombo 14x11', Redo 12x5', Tom 10x5.5' / 12x6'. Incluye pedal de Bomboy Platillo.",
     "image": "Batería-Odery.jpg",
-    "category ": "visto",
+    "category": "visto",
     "type": "percusión",
     "price": 110.000,
     "discount": 15
@@ -58,8 +58,8 @@
     "name": "Redoblante-Odery",
     "description": "Redoblante de maple Odery Eyedentity Series. Madera: Maple 100%. medidas: 10x4.5'. Torres: 6. Tirabordona: Eyedentity de 4 puntos de ajuste. Color: Maple Natural.",
     "image": "Redoblante-Odery.jpg",
-    "category ": "percusión",
-    "type": "visto",
+    "category": "oferta",
+    "type": "percusión",
     "price": 27.500,
     "discount": 10
   }, {
@@ -67,8 +67,8 @@
     "name": "Batería-Electrónica",
     "description": "Batería Electrónica Nux DM 210. Cantidad de cuerpos: 5. Tipos de conexiones: Bluetooth,Plug. Cantidad de sonidos: 1000. Incluye palillos, pedales y parches mesh, redoblante, metrónomo y reverb.",
     "image": "Batería-Electrónica.jpg",
-    "category ": "percusión",
-    "type": "visto",
+    "category": "visto",
+    "type": "percusión",
     "price": 10896.78,
     "discount": 10
   }, {
@@ -76,8 +76,8 @@
     "name": "Cajón-Peruano",
     "description": "Cajón Peruano GM LIMA profesional. Tapa 3mm con tornillos regulables y clavos de refuerzo. Medidas: 50 x 30 x 27 cm. Cuerpo de pPino Araucaria de 12mm.",
     "image": "Cajón-Peruano.jpg",
-    "category ": "percusión",
-    "type": "visto",
+    "category": "oferta",
+    "type": "percusión",
     "price": 15.800,
     "discount": 20
   }, {
@@ -85,63 +85,63 @@
     "name": "Conga",
     "description": "Conga de fibra Parquer Light de 10'. Color: negro.",
     "image": "Conga.jpg",
-    "category ": "percusión",
-    "type": "visto",
+    "category": "visto",
+    "type": "percusión",
     "price": 37.000,
     "discount": 5
   }, 
   {
-      "id": 11,
-      "name": "Violin eléctrico",
-      "description": "Nuevo",
-      "image": "vio-E.jpg",
-      "category ": "visto",
-      "type": "cuerda",
-      "price": 10544.13,
-      "discount": 10
-    }, {
-      "id": 12,
-      "name": "Bajo eléctrico",
-      "description": "Nuevo",
-      "image": "bajo-E.jpg",
-      "category ": "visto",
-      "type": "cuerda",
-      "price": 10544.13,
-      "discount": 10
-    }, {
-      "id": 13,
-      "name": "Bateria eléctrica",
-      "description": "Nuevo",
-      "image": "bat-E.jpg",
-      "category ": "visto",
-      "type": "percución",
-      "price": 10544.13,
-      "discount": 10
-    }, {
-      "id": 14,
-      "name": "Guitarra eléctrica",
-      "description": "Nuevo",
-      "image": "gui-E.jpg",
-      "category ": "visto",
-      "type": "cuerda",
-      "price": 10544.13,
-      "discount": 10
-    }, {
-      "id": 15,
-      "name": "Melodica eléctrica",
-      "description": "Nuevo",
-      "image": "melodica.jpg",
-      "category ": "visto",
-      "type": "percución",
-      "price": 10544.13,
-      "discount": 10
-    },
+    "id": 11,
+    "name": "Violin eléctrico",
+    "description": "Nuevo",
+    "image": "vio-E.jpg",
+    "category": "oferta",
+    "type": "cuerda",
+    "price": 10544.13,
+    "discount": 10
+  }, {
+    "id": 12,
+    "name": "Bajo eléctrico",
+    "description": "Nuevo",
+    "image": "bajo-E.jpg",
+    "category": "visto",
+    "type": "cuerda",
+    "price": 10544.13,
+    "discount": 10
+  }, {
+    "id": 13,
+    "name": "Bateria eléctrica",
+    "description": "Nuevo",
+    "image": "bat-E.jpg",
+    "category": "oferta",
+    "type": "percución",
+    "price": 10544.13,
+    "discount": 10
+  }, {
+    "id": 14,
+    "name": "Guitarra eléctrica",
+    "description": "Nuevo",
+    "image": "gui-E.jpg",
+    "category": "visto",
+    "type": "cuerda",
+    "price": 10544.13,
+    "discount": 10
+  }, {
+    "id": 15,
+    "name": "Melodica eléctrica",
+    "description": "Nuevo",
+    "image": "melodica.jpg",
+    "category": "oferta",
+    "type": "percución",
+    "price": 10544.13,
+    "discount": 10
+  },
   {
     "id": 16,
     "name": "Charango",
     "description": "Nuevo",
     "image": "/charango.jpg",
-    "category ": "visto",
+    "category": "visto",
     "type": "cuerda",
     "price": 10937.21,
     "discount": 10
@@ -150,7 +150,7 @@
     "name": "Violín",
     "description": "Nuevo",
     "image": "imagen_violin.jpg",
-    "category ": "visto",
+    "category": "oferta",
     "type": "cuerda",
     "price": 10870.12,
     "discount": 10
@@ -159,7 +159,7 @@
     "name": "Arpa",
     "description": "Nuevo",
     "image": "arpa.jpg",
-    "category ": "visto",
+    "category": "oferta",
     "type": "cuerda",
     "price": 10461.58,
     "discount": 10
@@ -168,7 +168,7 @@
     "name": "Ukelele",
     "description": "Nuevo",
     "image": "ukelele.jpg",
-    "category ": "visto",
+    "category": "oferta",
     "type": "cuerda",
     "price": 10560.69,
     "discount": 10
@@ -177,7 +177,7 @@
     "name": "Guitarra",
     "description": "Nuevo",
     "image": "guitarra.jpg",
-    "category ": "visto",
+    "category": "oferta",
     "type": "cuerda",
     "price": 10554.1,
     "discount": 10

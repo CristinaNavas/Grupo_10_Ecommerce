@@ -4,33 +4,28 @@
 
     <main class="container">
 
-        <section class="principal">
+        <section>
             
-            <div class="productosMain">
-                <article>
-                    <div class="division"><img class="imagenArticulo" src="/img/main/<%= producto.image%>" alt="<%= producto.name%>"></div>
-                    <div class="informacion">
-                        <div><i class="fa-solid fa-guitar guitarraIcono"></i></div>
-                        <div class="precioOferta">
-                            <p class="precio">$<%= producto.price%></p>
-                            <p class="oferta"><%= producto.discount%>% off</p>
-                            <p class="articulo"><%= producto.name%></p>
-                            <div><button class="boton"><a href="/productos/carrito/">Comprar</a></button></div>
-                            <div><button class="boton"><a href="/productos/productEdit/<%= producto.id%>">Editar</a></button></div>
-                            
-                            <form action="/productos/productDelete/<%= producto.id %>?_method=DELETE" method="POST">
-                                <div><button class="boton2" type="submit">Eliminar</button></div>
-                            </form>
-                            
-                        </div>
+            <div class="contenedorDetail">
+                <div class="imagenDetail"><img src="/img/main/<%= producto.image%>" alt="<%= producto.name%>"></div>
+                <div class="detallesDetail">
+                    <p class="articuloName"><%= producto.name%></p>
+                    <p class="precio">$<%= producto.price%></p>
+                    <p class="oferta"><%= producto.discount%>% off</p>
+                    <p class="articulo">Descripción:  <%= producto.description%></p>
+                    <p class="articulo">Instrumento tipo:  <%= producto.type%></p>
+                    <div class="botones">
+                        <div class="botonCompra"><button class="BD"><a href="/productos/carrito/">Comprar</a></button></div>
+                        <div class="botonEditar"><button class="BD"><a href="/productos/edit/<%= producto.id%>">Editar</a></button></div>
                     </div>
-                </article>
-               
+                    <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                        <div><button class="botonEliminar" type="submit">Eliminar</button></div>
+                    </form>
+                </div>
             </div>
+
         </section>
 
-       
-        </section>
     </main>
 
     <%- include("./partials/footer") %>

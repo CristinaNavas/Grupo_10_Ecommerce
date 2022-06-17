@@ -23,18 +23,18 @@ const productosController=require("../controller/productosController.js");
 
 router.get("/carrito",productosController.carrito);
 
-router.get("/products", productosController.productos);
+router.get("/", productosController.productos);
 
-router.get("/productDetail/:id",productosController.productDetail);
+router.get("/detail/:id",productosController.productDetail);
 //Rutas crear
-router.get("/productCreate",productosController.productCreate);
-router.post("/productCreate", upload.single("image"),productosController.productSave);
+router.get("/create",productosController.productCreate);
+router.post("/create", upload.single("image"),productosController.productSave);
 
 //Rutas Editar
-router.get("/productEdit/:id/",productosController.productEdit);
-router.put("/productEdit/:id/", upload.single("image"),productosController.productModify);
+router.get("/edit/:id/",productosController.productEdit);
+router.put("/edit/:id/", upload.single("image"),productosController.productModify);
 
 //Ruta Eliminar
-router.delete("/productDelete/:id/",productosController.destroy);
+router.delete("/delete/:id/",productosController.destroy);
 
 module.exports=router;

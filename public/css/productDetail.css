@@ -1,13 +1,55 @@
 /* @import url(index.css); */
 
+.contenedorDetail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin: 2%;
+}
+.imagenDetail{
+    width:50%;
+}
+.detallesDetail{
+    width:50%;
+    padding: 5%;
+}
 
 main .container{
     background-color: #ebebeb;
     margin: auto;
     margin-top: 5px;
-   
+}
+.articuloName{
+    font-size: 50px;
+}
+.botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin: 2%; 
+}
+.botonCompra{
+    width: 50%;
+    padding: 15px;
+    border-radius: 5px;
+  
 }
 
+.botonEditar{
+    width: 50%;
+    padding: 15px;
+    border-radius: 5px;
+}
+.BD{
+    width: 100%;
+}
+.botonEliminar{
+    width: 100%;
+}
 section{
     font-size: 24px;
     margin: auto;
