@@ -1,43 +1,58 @@
 [
-  {
-    "id": 1,
-    "firstName": "Leo",
-    "lastName": "Lara",
-    "email": "leo.lara@hotmail.com",
-    "password": "leo2520",
-    "category": "vendedor",
-    "image": "usuario_leo"
-  }, {
-    "id": 2,
-    "firstName": "Pablo",
-    "lastName": "Perez",
-    "email": "p.perez@hotmail.com",
-    "password": "perez-234",
-    "category": "vendedor",
-    "image": "usuario_pablo"
-  }, {
-    "id": 3,
-    "firstName": "Luis",
-    "lastName": "Rosas",
-    "email": "lrosas@yahoo.com.ar",
-    "password": "luis_4567",
-    "category": "vendedor",
-    "image": "usuario_luis"
-  }, {
-    "id": 4,
-    "firstName": "Cristina",
-    "lastName": "Rodriguez",
-    "email": "cris_rodri@gmail.com",
-    "password": "cris9876",
-    "category": "comprador",
-    "image": "usuario_cris"
-  }, {
-    "id": 5,
-    "firstName": "Oscar",
-    "lastName": "Ramirez",
-    "email": "oscar_rami234@gmail.com",
-    "password": "osqui4536",
-    "category": "comprador",
-    "image": "usuario_oscar"
-  }
+ {
+  "id": 1,
+  "firstName": "Leo",
+  "lastName": "Lara",
+  "email": "leo.lara@hotmail.com",
+  "password": "leo2520",
+  "category": "vendedor",
+  "image": "usuario_leo"
+ },
+ {
+  "id": 2,
+  "firstName": "Pablo",
+  "lastName": "Perez",
+  "email": "p.perez@hotmail.com",
+  "password": "perez-234",
+  "category": "vendedor",
+  "image": "usuario_pablo"
+ },
+ {
+  "id": 3,
+  "firstName": "Luis",
+  "lastName": "Rosas",
+  "email": "lrosas@yahoo.com.ar",
+  "password": "luis_4567",
+  "category": "vendedor",
+  "image": "usuario_luis"
+ },
+ {
+  "id": 4,
+  "firstName": "Cristina",
+  "lastName": "Rodriguez",
+  "email": "cris_rodri@gmail.com",
+  "password": "cris9876",
+  "category": "comprador",
+  "image": "usuario_cris"
+ },
+ {
+  "id": 5,
+  "firstName": "Oscar",
+  "lastName": "Ramirez",
+  "email": "oscar_rami234@gmail.com",
+  "password": "osqui4536",
+  "category": "comprador",
+  "image": "usuario_oscar"
+ },
+ {
+  "id": 6,
+  "firstName": "asdsa",
+  "nombreUsuario": "asdasd",
+  "email": "crisa@mit.edu",
+  "birthdate": "",
+  "domicilio": "sadsad",
+  "fotoUsuario": "",
+  "password": "$2a$10$9zjZuIaskYc.CyQOhx6XGuVeTaXcQCt/hkmuCNPkBadTKU5yCLRO6",
+  "password2": "$2a$10$8Mfr2OHyFgVWBm23X6c4Mu6LzBxh9i8XwlIMtGpCr3h2Odu3l1J2."
+ }
 ]
