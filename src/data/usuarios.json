@@ -54,5 +54,16 @@
   "fotoUsuario": "",
   "password": "$2a$10$9zjZuIaskYc.CyQOhx6XGuVeTaXcQCt/hkmuCNPkBadTKU5yCLRO6",
   "password2": "$2a$10$8Mfr2OHyFgVWBm23X6c4Mu6LzBxh9i8XwlIMtGpCr3h2Odu3l1J2."
+ },
+ {
+  "id": 7,
+  "firstName": "Maria",
+  "nombreUsuario": "Crisbee",
+  "email": "cris.30a@hotmail.com",
+  "birthdate": "1990-04-30",
+  "domicilio": "Ambato",
+  "fotoUsuario": "arpa.jpg",
+  "password": "$2a$10$mDOaQ5T4eTfeArBnOGcoJeuFWENo//NfxIqcRt998AK6sOtiPTxB.",
+  "password2": "$2a$10$hdJiAb/G.pHzOK8tqZYI9.Dd6v7f9XsNDxJczzTlBTuxLBn/HPAwq"
  }
 ]

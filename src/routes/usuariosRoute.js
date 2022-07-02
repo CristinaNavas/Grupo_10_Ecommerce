@@ -14,7 +14,7 @@ router.get("/register",usuariosController.register);
 // sprint 5
 router.get("/allUsers", usuariosController.allUsers)
 
-router.post('/register', usuariosController.processRegister);
+router.post('/register', multerMiddleware.single("fotoUsuario"), usuariosController.processRegister);
 
 router.post("/login",usuariosController.loginProcess);
 
