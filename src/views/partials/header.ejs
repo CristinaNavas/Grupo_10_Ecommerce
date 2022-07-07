@@ -3,20 +3,35 @@
         <div>
             <a href="/"><img class="logo" src="/img/claveLogo.jpg" alt="logo Clave de sol"></a>
         </div>
-        <div class="ingreso">
-            <p class="header-text"><a href="/usuarios/login"> <i class="fas fa-sign-in-alt ingreso  "></i></a></p>
-        </div>
-        <div class="registro">
-            <p class="header-text"><a href="/usuarios/register"><i class="fas fa-user-plus registro  "></i> </a></p>
-        </div>
-        <div class="carrito">
-            <p class="header-text"><a href="/productos/carrito/"><i class="fa-solid fa-cart-shopping carrito"></i></a></p>
-
-        </div>
         
-        <div class="lupa">
-            <p class="header-text"><a href="#"><i class="fas fa-search lupa "></i></a></p>
-        </div>
+        <% if (locals.isLogged) { %>
+            
+                    
+            <div class="carrito">
+                <p class="header-text"><a href="/productos/carrito/"><i class="fa-solid fa-cart-shopping carrito"></i></a></p>
+            </div>
+            <div class="ingreso">
+                <p class="header-text"><a href="/usuarios/logout"> <i class="fas fa-sign-in-alt ingreso  "></i></a></p>
+            </div>
+
+            <div style="text-align:center" class="ingreso">
+                <img src="/img/avatars/<%= locals.userLogged.avatar %>" width="40" style="border-radius: 100%;">
+                <p style="background-color:aliceblue">Hi User <%=  locals.userLogged.nombreUsuario %></p>
+            </div>
+        <% } else { %>
+            <div class="ingreso">
+                <p class="header-text"><a href="/usuarios/login"> <i class="fa-solid fa-user-check ingreso  "></i></a></p>
+            </div>
+            <div class="registro">
+                <p class="header-text"><a href="/usuarios/register"><i class="fas fa-user-plus registro  "></i> </a></p>
+            </div>
+            <div class="lupa">
+                <p class="header-text"><a href="#"><i class="fas fa-search lupa "></i></a></p>
+            </div>  
+        <% } %>
+           
+        
+
     </div>
    
     <nav>

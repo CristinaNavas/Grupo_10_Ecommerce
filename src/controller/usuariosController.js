@@ -7,6 +7,7 @@ const User = require('../models/User');
 
 const controller={
     login: (req,res)=>{
+        console.log(req.session)
         res.render("login");
     },
     register: (req,res)=>{
@@ -50,7 +51,7 @@ const controller={
             /* fotoUsuario: req.file, */
             password: bcryptjs.hashSync(req.body.password, 10),
             password2: bcryptjs.hashSync(req.body.password2, 10),
-            //avatar: req.file.filename
+            avatar: req.file.filename
             
         }
         
@@ -60,47 +61,59 @@ const controller={
         //return res.send('Ok, las validaciones se pasaron y no tienes errores')
     },
 
-    loginProcess: (req, res) => {
-        console.log(req.body);
-        console.log('-----------------');
-        let userToLogin = User.findByField('email', req.body.email);
-
+    loginProcess: (req, res)=>{
+        let userToLogin=User.findByField("email", req.body.email)
         if(userToLogin){
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-            if(isOkThePassword){
-               /*  delete userToLogin.password;
-                req.session.userLogged = userToLogin;
-
-               if(req.body.remember_user){
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
-                }  */
-
-                return res.redirect('/usuarios/allUsers');
-                
-                //return res.send(userToLogin);
-                //return res.send('Ok puedes ingresar')
+            let isOkPassword=bcryptjs.compareSync(req.body.password,userToLogin.password)
+            if (isOkPassword){
+                delete userToLogin.password;
+                delete userToLogin.password2;
+                req.session.userLogged=userToLogin; //OK
+                res.redirect("/usuarios/profile")
             }
-            return res.render('login', 
-            {errors:
-                {email:{
-                    msg: "Las Credenciales son inválidas"
+            else{
+                res.render("login",{
+                    errors:{
+                        password:
+                        {
+                            msg:"Password NOK",
+                        }
                     }
-                },
-                oldData: req.body
-            })
-            
+                })
+            }
+        }else{
+         res.render("login", {
+            errors:{
+                email:{
+                    msg:"No se encuentra este email registrado",
+                }
+            }
+         })
         }
-            
-        return res.render('userLoginForm', 
-            {errors:
-                {email:{
-                    msg: "No se encuentra este Email en nuestra base de datos"
-                    }
-                
-                },
-                oldData: req.body
-            })
+
     },
+
+    profile: (req,res)=>{
+        res.render("profile",{
+            "user": req.session.userLogged,
+        });
+    },
+
+    logout: (req, res) => {
+        console.log("desde logouttttt")
+        
+        console.log(req.session.userLogged)
+        if(req.session.userLogged ){
+
+            req.session.destroy();
+        return res.redirect("/");
+        } else{
+            res.redirect("/");
+        }
+
+        
+        
+    }
 
 }
 module.exports=controller
