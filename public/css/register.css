@@ -266,7 +266,7 @@ h2 {
 
 /* *********** Estilos Footer *************** */
 
-
+/* 
 footer {
   display: flex;
 
@@ -276,7 +276,7 @@ footer {
   border-top: solid 3px #524a2f;
   padding-top: 5%;
   
-}
+} */
 
 .quienes-somos {
   display: flex;
@@ -284,11 +284,11 @@ footer {
   font-size: 12px;
 }
 
-.text-footer {
+/* .text-footer {
   text-decoration: none;
   color: white;
-  }
-
+  } */
+/* 
 .iconos-footer {
   display: flex;
   justify-content: space-evenly;
@@ -315,7 +315,8 @@ footer {
   margin: auto;
   color: black;
   padding: 4% 3% 2% 4%;
-}
+} */
+
 
 /* ***************************************MEDIA QUERY************************************************** */
 /* 
@@ -436,7 +437,7 @@ footer {
    font-size: 30px;
    
   }
-  
+  /* 
    
   .iconos-footer {
     width: 50%;
@@ -460,7 +461,7 @@ footer {
     color: white;
     padding: 4% 15% 4% 2%;
   }
-
+ */
 }
 
 

@@ -1,0 +1,31 @@
+.usuario{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+.informacionUsuario{
+  width: 60%;
+  margin: auto;
+  background-color: antiquewhite;
+  border-style:solid;
+  border-color: black;
+  border-radius: 10%;
+}
+
+.dato{
+  text-align: center;
+}
+/* PROBANDO */
+.imagenUser{
+  margin: auto;
+  padding-left: 28%;
+ /*  width: 20%; */
+}
+.imagenUser2{
+  margin: auto;
+  /* width: 10%; */
+}

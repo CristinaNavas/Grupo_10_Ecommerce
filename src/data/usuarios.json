@@ -87,5 +87,41 @@
   "password": "$2a$10$QfcEblH5s9S5zrMEYVDXu.beT0E174pzkKM1LS3yH3u0VcTnxmyBS",
   "password2": "$2a$10$LQLPgKTC2.KUVypky8gHtO81htRkdT9uc12xP1mzTljvjYF39eUWW",
   "avatar": "file-1657155636141.jpg"
+ },
+ {
+  "id": 11,
+  "firstName": "Gabriela",
+  "nombreUsuario": "GAB",
+  "email": "gab.123@hotmail.com",
+  "birthdate": "1990-04-30",
+  "domicilio": "Ambato",
+  "radio": "on",
+  "password": "$2a$10$zbZhbyFzmgX655urmPfiHuT6ilfGh3UHD4ZvglSLg2ajGxK/muQG.",
+  "password2": "$2a$10$Mcdsc1vwKvoMtN5.em0cQ.NpqvpgFY6O7XNxKJ3ZrsqkB73ed1cia",
+  "avatar": "file-1657244523241.png"
+ },
+ {
+  "id": 12,
+  "firstName": "Pablo",
+  "nombreUsuario": "pablo",
+  "email": "pablo@hotmail.com",
+  "birthdate": "1990-02-02",
+  "domicilio": "Argentina",
+  "radio": "on",
+  "password": "$2a$10$.b.C1PXbejwOj.676PPW.erXNdrNtD4C9S1V9l8cPcXhhFmzJ8sSm",
+  "password2": "$2a$10$G7kSjatiLayIVrhEeOZUA.gnemfDrWyQuIcqwb6tKXMtiz31FE4lq",
+  "avatar": "file-1657244686276.png"
+ },
+ {
+  "id": 13,
+  "firstName": "Maria",
+  "nombreUsuario": "cris.30a@hotmail.com",
+  "email": "cris.30a@hotmail.com",
+  "birthdate": "1990-04-30",
+  "domicilio": "Ambato",
+  "comprador": "on",
+  "password": "$2a$10$RgV78YMzCsuZP.bK9cojru4W8W.CI1Og6BMfEvYunojzjkciod0v.",
+  "password2": "$2a$10$KKO37OW/77b3VWcRcs8bM.n3YQBWT/h4/ZgxqGTgmTMaJo5RVcdtm",
+  "avatar": "file-1657245513654.png"
  }
 ]
