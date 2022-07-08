@@ -51,3 +51,21 @@
 - Se borró los comentarios excesivos en cada archivo.
 - Se crearon carpetas que separan las views de productos, usuarios y main.
  
+
+# RETROSPECTIVA SPRINT 4
+
+## Aspectos positivos:
+- Culminación exitosa del Sprint, con buenos comentarios .
+- Buena organización.
+- Trabajamos en equipo.
+
+## Aspectos a mejorar:
+- Concordancia en los nombres de las propiedades de los formularios de registros.
+- Mejorar la distribución del tiempo.
+- Mejorar algunas vistas.
+
+## Cambios realizados:
+- Se modifican los formularios acorde a lo parámetros definidos.
+- Se diseña el CRUD con un entrypoint de Usuarios, a manera de mejorar la lectura del proyecto.
+- Creación del CRUD de usuarios.
+ 

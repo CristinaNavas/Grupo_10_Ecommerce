@@ -23,10 +23,25 @@ const mainRoute=require("./routes/mainRoute.js");
 const productosRoute=require("./routes/productosRoute.js");
 const usuariosRoute=require("./routes/usuariosRoute.js");
 
+// --------------- sprint 5 ------------- //
+// SESION //
+const session = require('express-session');
+
+app.use(session({
+  secret: "Shhh, It's a secret",
+  resave: false,
+  saveUninitialized: false,
+}))
+
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+app.use(userLoggedMiddleware)
+
 
 app.use("/",mainRoute);
 
 app.use("/productos",productosRoute);
 
 app.use("/usuarios",usuariosRoute);
+
+
 

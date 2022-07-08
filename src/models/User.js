@@ -62,4 +62,4 @@ const User = {
 
 module.exports = User;
 
-console.log(User.getData())
+//console.log(User.getData())

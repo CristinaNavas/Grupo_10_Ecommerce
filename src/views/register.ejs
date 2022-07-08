@@ -4,7 +4,7 @@
 
     <main>
         
-        <form class="form-register" action="/usuarios/register" method="POST">
+        <form class="form-register" action="/usuarios/register" method="POST" enctype="multipart/form-data">
             
             <h2>Registro de Usuario</h2>
 
@@ -60,7 +60,7 @@
             </div>
 
             <div class="div-foto-usuario">    
-                <input class="foto-usuario" type="file" name="fotoUsuario" accept=".jpg" id="fotoUsuario">
+                <input class="foto-usuario" type="file" name="fotoUsuario" accept=".jpg" id="fotoUsuario" required>
             </div>
 
 
