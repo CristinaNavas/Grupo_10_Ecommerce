@@ -162,7 +162,7 @@ padding: 1% 14% 0% 5%;
 font-size: 12px;
 }
 
-.text-footer {
+/* .text-footer {
 text-decoration: none;
 color: white;
 }
@@ -194,7 +194,7 @@ margin: auto;
 color: black;
 padding: 4% 3% 2% 4%;
 }
-
+ */
 /* ***************************************MEDIA QUERY************************************************** */
 /* 
 ****************************************TABLET*********************************** */
@@ -314,7 +314,7 @@ padding: 4% 3% 2% 4%;
  font-size: 30px;
  
 }
- 
+ /* 
 .iconos-footer {
   width: 50%;
   font-size: 30px;
@@ -328,7 +328,7 @@ padding: 4% 3% 2% 4%;
 
 .instagram {
   width: 40px;
-}
+} */
 .parrafo-footer {
   font-size: 12px;
   width: 100%;

@@ -5,9 +5,7 @@
     <main>
         
         <form class="form-register" action="/usuarios/register" method="POST" enctype="multipart/form-data">
-            
             <h2>Registro de Usuario</h2>
-
             <div>
                 <input class="nombreYapellido" type="text" name="firstName" placeholder="Nombre y apellido">   
             </div>
@@ -19,6 +17,11 @@
             <div>
                 <label for="email"></label>
                  <input class="email" type="email" required  placeholder="email" name="email"  id="email">
+                 <% if (locals.errors && locals.errors.email) { %>
+                    <p class="emailError">
+                      <%= errors.email.msg%>
+                    </p>
+                    <% } %>
                </div>
 
 
@@ -33,26 +36,22 @@
                 <input class="domicilio" type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
             </div>
 
-        
-             
             <div class="label-perfil-usuario">
                 <label  for="perfil-usuario"><strong >Perfil de usuario</strong></label>
             </div>
                 
             <div>    
                 <div class="input1-perfil-usuario">
-                    <input type="radio">
-                    <label for="">Comprador</label>
+                    <label for="comprador">Comprador</label>
+                    <input type="radio" name="comprador" id="comprador">
                 </div>
 
                 <div class="input2-perfil-usuario">
-                    <input type="radio">
-                    <label for="">vendedor</label>
+                    <label for="vendedor">vendedor</label>
+                    <input type="radio" name="vendedor" id="vendedor">       
                 </div>
                 
             </div>
-
-            
 
             
             <div  class="label-foto-usuario">
@@ -62,8 +61,6 @@
             <div class="div-foto-usuario">    
                 <input class="foto-usuario" type="file" name="fotoUsuario" accept=".jpg" id="fotoUsuario" required>
             </div>
-
-
             <div>
                 <input class="contraseña" type="password" name="password" id="contraseña" placeholder="Elegí tu contraseña">
             </div>

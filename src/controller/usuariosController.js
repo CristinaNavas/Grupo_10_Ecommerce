@@ -31,17 +31,16 @@ const controller={
 
         // buscar si el usuario ya exsite
         let userInDb = User.findByField('email', req.body.email);
-        //res.send(userInDb);
+        
         if(userInDb){
-            res.redirect('/usuarios/login') 
-           /*  {errors:
-                {email:{
-                    msg: "Este email ya está registrado"
+            res.render("register",{
+                errors:{
+                    email:
+                    {
+                        msg:"Password NOK",
                     }
-                
-                },
-                oldData: req.body
-            }) */
+                }
+            })
         }
         // crear el usuario entrante por el formulario
         //console.log(req.body , req.file)
@@ -51,11 +50,9 @@ const controller={
             /* fotoUsuario: req.file, */
             password: bcryptjs.hashSync(req.body.password, 10),
             password2: bcryptjs.hashSync(req.body.password2, 10),
-            avatar: req.file.filename
-            
+            avatar: req.file.filename    
         }
         
-        res.send(userToCreate);
         let userCreated = User.create(userToCreate);
         return res.redirect('/usuarios/login')
         //return res.send('Ok, las validaciones se pasaron y no tienes errores')
@@ -109,10 +106,7 @@ const controller={
         return res.redirect("/");
         } else{
             res.redirect("/");
-        }
-
-        
-        
+        }  
     }
 
 }
