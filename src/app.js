@@ -34,6 +34,7 @@ app.use(session({
 }))
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
+const db = require("./database/models/index.js");
 app.use(userLoggedMiddleware)
 
 

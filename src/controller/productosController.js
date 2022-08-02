@@ -2,7 +2,93 @@ const fs = require('fs');
 const path = require('path');
 const { privateDecrypt } = require('crypto');
 
+const { validationResult }=require("express-validator");
+
 const productsFilePath = path.join(__dirname, '../data/productos.json');
+
+
+
+const db = require("../database/models");
+const sequelize = db.sequelize;
+
+const controller = {
+    carrito: (req,res) => {
+        res.render("carrito");
+    },
+    productos: (req, res) => {
+        db.Producto.findAll() //Usamos el alias(al alias le damos el nombre del modelo en plural).
+            .then(function(productos) {
+                res.render("products",{producto:productos});
+            })
+    }, 
+    productDetail: function(req,res){
+        db.Producto.findByPk(req.params.id, 
+            {
+                include:["categorias"]
+            })
+            .then(function(producto){
+                res.render("productDetail", {producto:producto})
+            })
+    },
+    productCreate: (req,res) => {
+        res.render("productCreate");
+    },
+    productSave:(req,res) => {
+        db.Producto.create({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            image: req.file.filename,
+            discount: req.body.discount,
+            type: req.body.type,
+            productsCategory_id: req.body.category,
+ 
+        });
+
+        res.redirect("/");
+    },
+    productEdit:(req,res) => {
+        db.Producto.findByPk(req.params.id)
+            .then(function(producto) {
+                res.render('productEdit', {productToEdit:producto});
+            })
+    },
+    productModify:(req,res) => {
+        db.Producto.update({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            image: req.file.filename,
+            discount: req.body.discount,
+            type: req.body.type,
+            productsCategory_id: req.body.category,
+        }, {
+            where: {
+                id: req.params.id
+            }
+        });
+        res.redirect("/");
+    },
+    destroy : (req, res) => {
+        db.Producto.destroy({
+            where: {
+                id: req.params.id //Si le pongo la coma marca error
+            } 
+        });
+
+        res.redirect('/');
+    },
+    delete:(req,res)=>{
+        res.send("Hola");
+    }
+}
+
+module.exports = controller;
+
+
+
+/* Método JSON
+
 
 const controller={
   
@@ -26,7 +112,14 @@ const controller={
         res.render("productCreate")
     },
     productSave:(req,res)=>{
-        let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+        const resultValidation=validationResult(req);
+       
+        if (resultValidation.errors.length>0){
+            res.render("productCreate",{errors: resultValidation.mapped(),
+            })
+        }
+
+        /* let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         
         let idMax=products.reduce((accumulador, currentValue)=>{
             return (accumulador.id<currentValue.id ? accumulador.id:currentValue.id )
@@ -43,7 +136,7 @@ const controller={
         }
         products.push(newProducto);
         fs.writeFileSync(productsFilePath,JSON.stringify(products,null, " "))
-		res.redirect("/");
+		res.redirect("/"); 
     },
     productEdit:(req,res)=>{
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -54,7 +147,6 @@ const controller={
         });
 
         res.render('productEdit', {productToEdit:productToEdit})
-     
     },
     productModify:(req,res)=>{
         let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -86,4 +178,4 @@ const controller={
         res.redirect('/');
     }
 }
-module.exports=controller
+module.exports=controller */

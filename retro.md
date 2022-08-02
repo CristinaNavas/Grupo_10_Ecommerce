@@ -68,4 +68,20 @@
 - Se modifican los formularios acorde a lo parámetros definidos.
 - Se diseña el CRUD con un entrypoint de Usuarios, a manera de mejorar la lectura del proyecto.
 - Creación del CRUD de usuarios.
- 
+
+
+# RETROSPECTIVA SPRINT 5
+
+## Aspectos positivos:
+- Culminación exitosa del Sprint, con buenos comentarios y observaciones importantes mismas que se van a tomar en cuenta como mejora en el próximo sprint.
+- Nos organizacon con eficiencia y optimizamos el tiempo.
+- Trabajamos en equipo todos los temas.
+
+## Aspectos a mejorar:
+- Concordancia en los nombres de las propiedades de los formularios de registros.
+- Mejorar la distribución del tiempo.
+- Distribución de tareas en función del tiempo es un aspecto a mejorar importante.
+
+## Cambios realizados:
+- Se desarrolla el código correspondientes a las actividades del srint
+- Creación de las validaciones mediante express-validation.
