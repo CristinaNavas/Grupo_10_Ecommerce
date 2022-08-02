@@ -10,18 +10,27 @@
             <!-- Nombre -->
             <div class="labInp" >
               <label class="lab" for="name">Producto</label>
-              <input class="inp" type="text" required  placeholder="Guitarra" name="name"  id="name">
+              <input class="inp <% locals.errors && errors.name ? "bordeFail" :null %> " type="text" placeholder="Guitarra" name="name"  id="name" >
+              <% if (locals.errors && errors.name) { %>
+                <p class="errorCreate"><%= errors.name.msg%></p>          
+              <% } %>
             </div>
             <!-- Precio -->
             <div class="labInp">
               <label class="lab" for="price">Precio</label>
-              <input class="inp" type="number" required placeholder="($)100" name="price"  id="price" />
+              <input class="inp" type="number" placeholder="($)100" name="price"  id="price" />
+              <% if (locals.errors && errors.price) { %>
+                <p class="errorCreate"><%= errors.price.msg%></p>          
+              <% } %>
             </div>
 
             <!-- Descuento -->
             <div class="labInp">
               <label class="lab" for="discount">Descuento</label>
-              <input class="inp" type="number" required placeholder="10(%)" name="discount"  id="discount" />
+              <input class="inp" type="number" placeholder="10(%)" name="discount"  id="discount" />
+              <% if (locals.errors && errors.discount) { %>
+                <p class="errorCreate"><%= errors.discount.msg%></p>          
+              <% } %>
             </div>
 
             <!-- Tipo -->
@@ -33,7 +42,11 @@
                 <option value="percusion">Percusión</option>
                 <option value="electrico">Eléctrico</option>
               </select>
+              <% if (locals.errors && errors.type) { %>
+                <p class="errorCreate"><%= errors.type.msg%></p>          
+              <% } %>
             </div>  
+
             <!-- Categoría -->
             <div class="labInp">
               <label class="lab" for="category" class="form-label">Categoría:</label>
@@ -42,18 +55,24 @@
                 <option value="in-sale">En oferta</option>
                 <option value="visited">Últimos agregados</option>
               </select>
+              <% if (locals.errors && errors.category) { %>
+                <p class="errorCreate"><%= errors.category.msg%></p>          
+              <% } %>
             </div>      
 
             <!-- Descripción -->
             <div class="labInp">
-              <label class="lab" for="descripcionProducto">Descripción</label>
-              <input class="inp" type="textarea" maxlenght="100" placeholder="Nuevo" name="desciption"  id="descipcionProducto">
+              <label class="lab" for="description">Descripción</label>
+              <input class="inp" type="textarea" maxlenght="100" placeholder="Nuevo" name="description"  id="description">
+              <% if (locals.errors && errors.description) { %>
+                <p class="errorCreate"><%= errors.description.msg%></p>          
+              <% } %>
             </div>
 
             <!-- Imagen -->
             <div class="labInp">
               <label class="lab" for="image">Imagen</label>
-              <input class="inp" type="file" name="image"  id="image" required>
+              <input class="inp" type="file" name="image"  id="image">
             </div>
 
             <!-- Botón -->

@@ -16,6 +16,18 @@ const storage=multer.diskStorage({
     },
 })
 const upload= multer({storage:storage})
+////************** Validacion ****************/////
+const {body}=require("express-validator");
+
+const validations=[
+    body("name").notEmpty().withMessage("Ingresa el nombre del producto"),
+    body("price").notEmpty().withMessage("Ingresa el precio producto"),
+    body("discount").notEmpty().withMessage("Ingresa el descuento del producto"),
+    body("type").notEmpty().withMessage("Selecciona el tipo del producto"),
+    body("category").notEmpty().withMessage("Selecciona la categoría del producto"),
+    body("description").notEmpty().withMessage("Ingresa una descripción"),
+];
+
 
 // ************ Controller Require ************
 const productosController=require("../controller/productosController.js");
