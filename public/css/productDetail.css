@@ -31,11 +31,13 @@ main .container{
     width: 100%;
     align-items: center;
     margin: 2%; 
+    
 }
 .botonCompra{
     width: 50%;
     padding: 15px;
     border-radius: 5px;
+    
   
 }
 
@@ -43,12 +45,24 @@ main .container{
     width: 50%;
     padding: 15px;
     border-radius: 5px;
+    
 }
 .BD{
     width: 100%;
+    background-color:#d4a40d;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 .botonEliminar{
-    width: 100%;
+    width: 90%;
+    background-color:#d4a40d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 9%;
+    margin-bottom:10%
+    
 }
 section{
     font-size: 24px;
