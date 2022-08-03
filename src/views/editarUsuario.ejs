@@ -4,22 +4,22 @@
 
     <main>
         
-        <form class="form-register" action="/usuarios/register" method="POST" enctype="multipart/form-data">
-            <h2>Registro de Usuario</h2>
+        <form class="form-register" action="/usuarios/editProfile/<%= usuario.id %> " method="POST" enctype="multipart/form-data">
+            <h2>Editar Usuario</h2>
             <div>
-                <input class="nombreYapellido" type="text" name="name" placeholder="Nombre">   
+                <input class="nombreYapellido" type="text" name="name" value="<%= usuario.name %>">   
             </div>
             <div>
-                <input class="nombreYapellido" type="text" name="lastname" placeholder="Apellido">   
+                <input class="nombreYapellido" type="text" name="lastname" value="<%= usuario.lastname %>">   
             </div>
 
             <div>
-                <input class="nombre-de-usuario" type="text" name="nickname" id="nombre-usuario" placeholder="Nombre de usuario">
+                <input class="nombre-de-usuario" type="text" name="nickname" id="nombre-usuario" value="<%= usuario.nickname %>"">
             </div>
 
             <div>
                 <label for="email"></label>
-                 <input class="email" type="email" required  placeholder="email" name="email"  id="email">
+                 <input class="email" type="email" required  value="<%= usuario.email %>" name="email"  id="email">
                  <% if (locals.errors && locals.errors.email) { %>
                     <p class="emailError">
                       <%= errors.email.msg%>
@@ -32,11 +32,11 @@
                 <label for="birthdate"><strong >Fecha de nacimiento</strong></label>
             </div>
             <div>
-                <input class="input-fecha-nacimiento border-radius-boxes" type="date" name="birthday" id="birthdate">
+                <input class="input-fecha-nacimiento border-radius-boxes" type="date" name="birthday" id="birthdate" value="<%= usuario.birthday %>">
             </div>
 
             <div >
-                <input class="domicilio" type="text" name="address" id="domicilio" placeholder="Domicilio">
+                <input class="domicilio" type="text" name="address" id="domicilio" value="<%= usuario.address %>">
             </div>
 
             <div class="label-perfil-usuario">
@@ -63,7 +63,7 @@
             </div>
 
             <div class="div-foto-usuario">    
-                <input class="foto-usuario" type="file" name="avatar" accept=".jpg" id="fotoUsuario" required>
+                <input class="foto-usuario" type="file" name="avatar" accept=".jpg" id="fotoUsuario" required value="<%= usuario.avatar %>">
             </div>
             <div>
                 <input class="contraseña" type="password" name="password" id="contraseña" placeholder="Elegí tu contraseña">

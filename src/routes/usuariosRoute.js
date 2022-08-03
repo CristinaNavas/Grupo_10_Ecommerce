@@ -20,13 +20,17 @@ router.get("/register", guestMiddleware, usuariosController.register);
 
 router.get("/allUsers", usuariosController.allUsers)
 
-router.post('/register', multerMiddleware.single("fotoUsuario"), usuariosController.processRegister);
+router.post('/register', multerMiddleware.single("avatar"), usuariosController.processRegister);
 
 router.post("/login", usuariosController.loginProcess);
 
 router.get('/profile', authMiddleware, usuariosController.profile)
 
 router.get('/logout', usuariosController.logout)
+
+router.get('/editProfile/:id/', usuariosController.editProfile)
+
+router.post('/editProfile/:id/',multerMiddleware.single("avatar"), usuariosController.saveProfile)
 
 ;
 
