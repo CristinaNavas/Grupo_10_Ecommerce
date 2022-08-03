@@ -53,15 +53,17 @@ main .container{
     color: white;
     border: none;
     border-radius: 5px;
+    padding: 1%
 }
 .botonEliminar{
-    width: 90%;
+    width: 95%;
     background-color:#d4a40d;
     color: white;
     border: none;
     border-radius: 5px;
-    margin-left: 9%;
-    margin-bottom:10%
+    margin-left: 5%;
+    margin-bottom:10%;
+    padding: 1%
     
 }
 section{
