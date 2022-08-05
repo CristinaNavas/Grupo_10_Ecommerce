@@ -27,9 +27,9 @@
               <div class="informacionUsuario">
                   <div class="imagenUser"><img class="imagenUser2" src="/img/avatars/<%= user.avatar%>" alt="<%= user.firstName%>"></div>
                   <div class="detailUser">
-                      <p class="dato"><%= user.firstName%></p>
+                      <p class="dato"><%= user.name%></p>
                       <p class="dato"><%= user.email%></p>
-                      <p class="dato"><%= user.domicilio%></p>
+                      <p class="dato"><%= user.address%></p>
                       
                    <!--    <div>
                         <%= /* JSON.stringify(user) */ %>
@@ -37,6 +37,8 @@
 
                   </div>
               </div>
+              <div class="botonCompra"><button class="BD"><a href="/usuarios/editProfile/<%= user.id%>">Editar</a></button></div>
+              
           </section>
       </main>
   </body>

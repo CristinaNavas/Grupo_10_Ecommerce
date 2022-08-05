@@ -40,11 +40,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         //Les agrego este campo, para que me muestre el nombre de la categoria usuario
-        userProfile_id: {
+        usersProfile_id: {
             type: dataTypes.INTEGER,
             allowNull: false,
             references:{
-                model: "userProfile",
+                model: "usersProfile",
                 key: "id"
             }
         }
