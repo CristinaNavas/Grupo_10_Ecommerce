@@ -66,17 +66,26 @@ const controller = {
             where: {
                 id: req.params.id
             }
-        });
-        res.redirect("/");
+
+        })
+        .then((result)=>{
+            res.redirect("/");
+        }
+        )
+        
+
     },
     destroy : (req, res) => {
         db.Producto.destroy({
             where: {
                 id: req.params.id //Si le pongo la coma marca error
             } 
-        });
+        })
+        
 
-        res.redirect('/');
+        .then((result)=>{
+            res.redirect("/");
+        })
     },
     delete:(req,res)=>{
         res.send("Hola");

@@ -53,7 +53,9 @@ main .container{
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 1%
+    padding: 1%;
+    margin-top: 40%;
+    margin-left: 2%;
 }
 .botonEliminar{
     width: 95%;
@@ -169,6 +171,7 @@ section{
 }
 .btn:hover{
     background-color: rgba(0,0,0,.1);
+    
 }
 
 

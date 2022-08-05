@@ -123,5 +123,17 @@
   "password": "$2a$10$RgV78YMzCsuZP.bK9cojru4W8W.CI1Og6BMfEvYunojzjkciod0v.",
   "password2": "$2a$10$KKO37OW/77b3VWcRcs8bM.n3YQBWT/h4/ZgxqGTgmTMaJo5RVcdtm",
   "avatar": "file-1657245513654.png"
+ },
+ {
+  "id": 14,
+  "firstName": "pablo",
+  "nombreUsuario": "Perez",
+  "email": "perez@yahoo.com",
+  "birthdate": "1979-02-22",
+  "domicilio": "pachuca 233",
+  "comprador": "on",
+  "password": "$2a$10$igwgIPSI3SMc4cZ79EedJu1EuS2bYojurzxrjulQXrUeoTq8R.a5G",
+  "password2": "$2a$10$AeZ.jWC5N9tZOlGkzgwd0.AEjwVuzkDZAIZO8EFIBV61iI6uOVsSC",
+  "avatar": "file-1659659214059.jpg"
  }
 ]

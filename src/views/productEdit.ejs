@@ -10,18 +10,18 @@
             <!-- Nombre -->
             <div class="labInp" >
               <label class="lab" for="name">Producto</label>
-              <input class="inp" type="text" required  placeholder="<%= productToEdit.name%>" name="name"  id="name">
+              <input class="inp" type="text" required  value="<%= productToEdit.name%>" name="name"  id="name">
             </div>
             <!-- Precio -->
             <div class="labInp">
               <label class="lab" for="price">Precio</label>
-              <input class="inp" type="number" required placeholder="($)<%= productToEdit.price%>" name="price"  id="price" />
+              <input class="inp" type="number" required value="<%= productToEdit.price%>" name="price"  id="price" />
             </div>
 
             <!-- Descuento -->
             <div class="labInp">
               <label class="lab" for="discount">Descuento</label>
-              <input class="inp" type="number" required placeholder="<%= productToEdit.discount%>(%)" name="discount"  id="discount" />
+              <input class="inp" type="number" required value="<%= productToEdit.discount%>" name="discount"  id="discount" />
             </div>
 
             <!-- Tipo -->
@@ -47,7 +47,7 @@
             <!-- Descripción -->
             <div class="labInp">
               <label class="lab" for="descripcionProducto">Descripción</label>
-              <input class="inp" type="textarea" maxlenght="100" placeholder="<%= productToEdit.description%>" name="desciption"  id="descipcionProducto">
+              <input class="inp" type="textarea" maxlenght="100" value="<%= productToEdit.description%>" name="desciption"  id="descipcionProducto">
             </div>
 
             <!-- Imagen -->
