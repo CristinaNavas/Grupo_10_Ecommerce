@@ -1,9 +1,9 @@
 // sprint 5
 const path = require("path");
-//const { validationResult } = require('express-validator');
+const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs')
 const User = require('../models/User');
-//
+
 const db = require("../database/models");
 const sequelize = db.sequelize;
 
@@ -20,39 +20,48 @@ const controller={
         let allUsers = User.findAll()
         res.send(allUsers)
     },
-
+  
     processRegister: (req,res) => {
-        // buscar si el usuario ya exsite
         db.Usuario.findOne({
             where:{
                 email:req.body.email,
             }
-        }).then ((userInDb)=>{
-            console.log(userInDb)
-            console.log("Repite email")
+            }).then ((userInDb)=>{
             if (userInDb){
-                res.render("register",{
+                res.redirect("/usuarios/login");
+            } else {
+
+            const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 1){
+                if(req.body.password.length < 8){
+                    console.log(req.body.password.length);
+                    res.render("register", {
+                    errores: resultValidation.mapped(),
+                    oldData: req.body,
                     errors:{
-                        email:
-                        {
-                            msg:"Email existente",
-                        }
-                    }
+                        password:
+                            {numberCharacters:"Tu contraseña debe tener almenos 8 caracteres."}
+                    }  });
+                }
+                res.render("register",{
+                    errores: resultValidation.mapped(),
+                    oldData: req.body,
                 })
+                console.log("Error en las validaciones");
+                    
             }
-            else{
+            else//{
                 if(req.body.password == req.body.password2){
                     
                     db.Usuario.create({
-                     name: req.body.name, //En register.ejs figura nombre y apellido. Corregir.
-                     lastname: req.body.lastname, //En register.ejs figura nombreUsario
+                     name: req.body.name, 
+                     lastname: req.body.lastname, 
                      email: req.body.email,
                      nickname:req.body.nickname,
                      birthday: req.body.birthday,
-                     address: req.body.address, //figura como domicilio
+                     address: req.body.address, 
                      avatar: req.file.filename,
                      password: bcryptjs.hashSync(req.body.password, 10),
-                     //eliminar o ver como usar en register.ejs perfil de usuario (comprador-vendedor)
                      usersProfile_id: req.body.userProfile_id,
                     });
                     res.redirect("/usuarios/login");
@@ -60,86 +69,34 @@ const controller={
                 }
                 else{
                     res.render("register",{
+                        errores: resultValidation.mapped(),
+                        oldData: req.body,
                         errors:{
                             password:
-                            {
-                                msg:"Password no coincide",
-                            }
-                        }
-                    })
+                                {msg:"Password no coincide"}
+                        }  
+                    }) 
                 }    
-            }
-        })
-    },
-        /* )
-            
-              //Corroboro que el usuario haya puesto los 2 passwords iguales
-                if(req.body.pasword == req.body.pasword2){
-                    
-                        db.Usuario.create({
-                         name: req.body.name, //En register.ejs figura nombre y apellido. Corregir.
-                         lastname: req.body.lastname, //En register.ejs figura nombreUsario
-                         email: req.body.email,
-                         nickname:req.body.nickname,
-                         birthday: req.body.birthday,
-                         address: req.body.address, //figura como domicilio
-                         avatar: req.file.filename,
-                         password: bcryptjs.hashSync(req.body.password, 10),
-                         //eliminar o ver como usar en register.ejs perfil de usuario (comprador-vendedor)
-                         usersProfile_id: req.body.userProfile_id,
-                     });
-                            res.redirect("/usuarios/login");
-
-            }
-            else{
-                alert("Las contraseñas no son iguales");
-            }
-    },     
-             */
-    
-        /* const resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0){
-            return res.render('userRegisterForm', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            })
-        } */
-
-        // buscar si el usuario ya existe
-    /*     let userInDb = Usuario.findByField('email', req.body.email);
-        
-        if(userInDb){
-            res.render("register",{
-                errors:{
-                    email:
-                    {
-                        msg:"Password NOK",
-                    }
-                }
-            })
-        } */
-        // crear el usuario entrante por el formulario
-        //console.log(req.body , req.file)
-/*         let userToCreate = {
-            
-            ...req.body,
-            /* fotoUsuario: req.file, */
-/*             password: bcryptjs.hashSync(req.body.password, 10),
-            password2: bcryptjs.hashSync(req.body.password2, 10),
-            avatar: req.file.filename    
+           // }
         }
-        
-        let userCreated = Usuario.create(userToCreate);
-        return res.redirect('/usuarios/login')
-        //return res.send('Ok, las validaciones se pasaron y no tienes errores')
-    }, */ 
-
+        })
+    
+    }, 
+       
     loginProcess: (req, res)=>{
         db.Usuario.findOne({
             where:{
                 email:req.body.email,
             }
         }).then ((userLogin)=>{
+            /* const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 0){
+                
+                res.render("login",{
+                    errores: resultValidation.mapped(),
+                    oldData: req.body,
+                })
+            }  */
             
             if (userLogin){
                 isOkPassword=bcryptjs.compareSync(req.body.password,userLogin.password)
@@ -152,16 +109,18 @@ const controller={
                     }
                     else{
                         res.render("login",{
+                            oldData: req.body,
                             errors:{
                                 password:
                                 {
-                                    msg:"Password NOK",
+                                    msg:"Password Incorrecto",
                                 }
                             }
                         })
                     }
             }else{
-                 res.render("login", {
+                console.log("");
+                 res.render("register", {
                     errors:{
                         email:{
                             msg:"No se encuentra este email registrado",
@@ -206,12 +165,12 @@ const controller={
     },
     saveProfile: (req,res)=>{
         db.Usuario.update({
-                name: req.body.name, //En register.ejs figura nombre y apellido. Corregir.
-                lastname: req.body.lastname, //En register.ejs figura nombreUsario
+                name: req.body.name, 
+                lastname: req.body.lastname, 
                 email: req.body.email,
                 nickname:req.body.nickname,
                 birthday: req.body.birthday,
-                address: req.body.address, //figura como domicilio
+                address: req.body.address, 
                 avatar: req.file.filename,
                 password: bcryptjs.hashSync(req.body.password, 10),
                 usersProfile_id: req.body.userProfile_id,

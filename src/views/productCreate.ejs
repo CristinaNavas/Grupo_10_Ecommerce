@@ -10,15 +10,30 @@
             <!-- Nombre -->
             <div class="labInp" >
               <label class="lab" for="name">Producto</label>
-              <input class="inp <% locals.errors && errors.name ? "bordeFail" :null %> " type="text" placeholder="Guitarra" name="name"  id="name" >
+              <input class="inp <%= locals.errors && errors.name ? "bordeFail" : null %>" 
+              type="text" 
+              placeholder="Guitarra" 
+              name="name"  
+              id="name" 
+              value= "<%= locals.oldData ? oldData.name : null %>"
+              >
+
               <% if (locals.errors && errors.name) { %>
-                <p class="errorCreate"><%= errors.name.msg%></p>          
+                <div class="errorCreate"><p><%= errors.name.msg%></p></div>
+                         
               <% } %>
             </div>
+
             <!-- Precio -->
             <div class="labInp">
               <label class="lab" for="price">Precio</label>
-              <input class="inp" type="number" placeholder="($)100" name="price"  id="price" />
+              <input class="inp <%= locals.errors && errors.price ? "bordeFail" : null %>" 
+              type="text" 
+              placeholder="($)100" 
+              name="price"  
+              id="price" 
+              value= "<%= locals.oldData ? oldData.price : null %>"
+              >
               <% if (locals.errors && errors.price) { %>
                 <p class="errorCreate"><%= errors.price.msg%></p>          
               <% } %>
@@ -27,7 +42,13 @@
             <!-- Descuento -->
             <div class="labInp">
               <label class="lab" for="discount">Descuento</label>
-              <input class="inp" type="number" placeholder="10(%)" name="discount"  id="discount" />
+              <input class="inp <%= locals.errors && errors.discount ? "bordeFail" : null %>" 
+              type="text" 
+              placeholder="10(%)" 
+              name="discount"  
+              id="discount" 
+              value= "<%= locals.oldData ? oldData.discount : null %>"
+              >
               <% if (locals.errors && errors.discount) { %>
                 <p class="errorCreate"><%= errors.discount.msg%></p>          
               <% } %>
@@ -37,6 +58,7 @@
             <div class="labInp">
               <label class="lab" for="type" class="">Tipo</label>
               <select name="type" id="type" class="inp">
+                <option value="">Elegí</option>
                 <option value="cuerdas">Cuerdas</option>
                 <option value="viento">Viento</option>
                 <option value="percusion">Percusión</option>
@@ -50,7 +72,7 @@
             <!-- Categoría -->
             <div class="labInp">
               <label class="lab" for="category" class="form-label">Categoría:</label>
-              <select name="category" id="category" class="inp">
+              <select name="category" id="category" class="inp" <%= locals.errors && errors.category ? "bordeFail" : null %>>
                 <option value="">Elegí</option>
                 <option value="in-sale">En oferta</option>
                 <option value="visited">Últimos agregados</option>
@@ -63,7 +85,15 @@
             <!-- Descripción -->
             <div class="labInp">
               <label class="lab" for="description">Descripción</label>
-              <input class="inp" type="textarea" maxlenght="100" placeholder="Nuevo" name="description"  id="description">
+              <input class="inp <%= locals.errors && errors.description ? "bordeFail" : null %>" 
+              type="textarea" 
+              maxlenght="100" 
+              placeholder="Nuevo" 
+              name="description"  
+              id="description"
+              value= "<%= locals.oldData ? oldData.description : null %>"
+              >
+              
               <% if (locals.errors && errors.description) { %>
                 <p class="errorCreate"><%= errors.description.msg%></p>          
               <% } %>
@@ -73,7 +103,11 @@
             <div class="labInp">
               <label class="lab" for="image">Imagen</label>
               <input class="inp" type="file" name="image"  id="image">
-            </div>
+              
+              <% if (locals.errors && errors.image) { %>
+                <p class="errorCreate"><%= errors.image.msg%></p>          
+                <% } %>
+              </div>
 
             <!-- Botón -->
             <div class="boton-ingresar" >

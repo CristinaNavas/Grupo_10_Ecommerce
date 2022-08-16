@@ -141,6 +141,12 @@ h2 {
  /*  margin-bottom: 64%; */
   
 }
+.text-danger-login {
+  color: red;
+  text-align: center;
+    margin-top: 5px;
+} 
+
 
 /* *********** Estilos Footer *************** */
 

@@ -264,6 +264,18 @@ h2 {
     background-color: #0022AA;
 }
 
+.text-danger {
+  color: red;
+  text-align: center;
+   margin-top: -15px;
+  margin-bottom: 15px;
+  
+} 
+
+.is-invalid {
+  border-style: solid;
+  border-color: red;
+
 /* *********** Estilos Footer *************** */
 
 /* 

@@ -34,18 +34,29 @@ const controller = {
         res.render("productCreate");
     },
     productSave:(req,res) => {
-        db.Producto.create({
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            image: req.file.filename,
-            discount: req.body.discount,
-            type: req.body.type,
-            productsCategory_id: req.body.category,
- 
-        });
+        const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 1){
+                //console.log(resultValidation.errors);
+                res.render("productCreate", {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body,
+                     });
+            } else {
 
-        res.redirect("/");
+                db.Producto.create({
+                    name: req.body.name,
+                    description: req.body.description,
+                    price: req.body.price,
+                    image: req.file.filename,
+                    discount: req.body.discount,
+                    type: req.body.type,
+                    productsCategory_id: req.body.category,
+         
+                });
+        
+                res.redirect("/");
+            }
+
     },
     productEdit:(req,res) => {
         db.Producto.findByPk(req.params.id)
@@ -54,6 +65,15 @@ const controller = {
             })
     },
     productModify:(req,res) => {
+        const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 1){
+                console.log(resultValidation.errors.length, resultValidation.errors);
+                res.render("productEdit", {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body,
+                     });
+            }
+
         db.Producto.update({
             name: req.body.name,
             description: req.body.description,
@@ -70,10 +90,8 @@ const controller = {
         })
         .then((result)=>{
             res.redirect("/");
-        }
-        )
-        
-
+        })
+            
     },
     destroy : (req, res) => {
         db.Producto.destroy({
