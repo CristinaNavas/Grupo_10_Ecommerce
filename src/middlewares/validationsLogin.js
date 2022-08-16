@@ -1,5 +1,6 @@
 const {check} = require("express-validator");
 
+
 const validations = [
     check("email")
          .notEmpty().withMessage("Tienes que escribir un correo electronico").bail() 

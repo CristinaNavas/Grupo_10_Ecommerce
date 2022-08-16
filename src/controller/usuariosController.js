@@ -32,7 +32,7 @@ const controller={
             } else {
 
             const resultValidation = validationResult(req);
-            if (resultValidation.errors.length > 1){
+            if (resultValidation.errors.length > 0){
                 if(req.body.password.length < 8){
                     console.log(req.body.password.length);
                     res.render("register", {

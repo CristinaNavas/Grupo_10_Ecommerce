@@ -35,8 +35,8 @@ const controller = {
     },
     productSave:(req,res) => {
         const resultValidation = validationResult(req);
-            if (resultValidation.errors.length > 1){
-                //console.log(resultValidation.errors);
+            if (resultValidation.errors.length > 0){
+                console.log(resultValidation.errors.length);
                 res.render("productCreate", {
                     errors: resultValidation.mapped(),
                     oldData: req.body,
@@ -66,7 +66,7 @@ const controller = {
     },
     productModify:(req,res) => {
         const resultValidation = validationResult(req);
-            if (resultValidation.errors.length > 1){
+            if (resultValidation.errors.length > 0){
                 console.log(resultValidation.errors.length, resultValidation.errors);
                 res.render("productEdit", {
                     errors: resultValidation.mapped(),
