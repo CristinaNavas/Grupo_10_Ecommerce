@@ -36,7 +36,6 @@ window.addEventListener('load', function(){
         }else if(!allowedExtensions.exec(filePath)){
             errores.push("el campo imagen sólo admite extenciones JPG, JPEG, PNG, GIF")
         }
-     
 
         if(errores.length > 0){
             e.preventDefault();

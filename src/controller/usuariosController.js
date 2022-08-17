@@ -6,6 +6,8 @@ const User = require('../models/User');
 const db = require("../database/models");
 const sequelize = db.sequelize;
 
+
+
 const controller={
     login: (req,res)=>{
         console.log(req.session)
@@ -23,13 +25,15 @@ const controller={
     processRegister: (req,res) => {
         // buscar si el usuario ya exsite
         const resultValidation=validationResult(req);
+       
         if (resultValidation.errors.length>0){
             return res.render("register", {
                 errors: resultValidation.mapped(),
+                oldData: req.body
             })
         }
 
-        /* db.Usuario.findOne({
+        db.Usuario.findOne({
             where:{
                 email:req.body.email,
             }
@@ -75,7 +79,7 @@ const controller={
                     })
                 }    
             }
-        }) */
+        }) 
     },
 
 

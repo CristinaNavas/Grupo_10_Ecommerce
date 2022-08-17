@@ -59,21 +59,18 @@ const controller = {
     productEdit:(req,res) => {
         db.Producto.findByPk(req.params.id)
             .then(function(producto) {
-                res.send(producto)
                 res.render('productEdit', {productToEdit:producto});
             })
     },
     productModify:(req,res) => {
-
-        const resultValidation = validationResult(req);
-            if (resultValidation.errors.length > 0){
-                console.log(resultValidation.errors.length, resultValidation.errors);
-                res.render("productEdit", {
-                    errors: resultValidation.mapped(),
-                    oldData: req.body,
-                     });
-            }
-
+        const resultValidation=validationResult(req);
+        if (resultValidation.errors.length>0){
+            return res.render("productCreate",{
+                errors:resultValidation.mapped(),
+                oldData:req.body
+            })
+        }
+        
         db.Producto.update({
             name: req.body.name,
             description: req.body.description,
@@ -86,12 +83,8 @@ const controller = {
             where: {
                 id: req.params.id
             }
-
-        })
-        .then((result)=>{
-            res.redirect("/");
-        })
-            
+        });
+        res.redirect("/");
     },
     destroy : (req, res) => {
         db.Producto.destroy({

@@ -35,8 +35,7 @@ router.post("/create", upload.single("image"),  validations, productosController
 
 //Rutas Editar
 router.get("/edit/:id/",productosController.productEdit);
-router.put("/edit/:id/", upload.single("image") ,validations, productosController.productModify);
-
+router.put("/edit/:id/", upload.single("image"), validations, productosController.productModify);
 
 
 //Ruta Eliminar

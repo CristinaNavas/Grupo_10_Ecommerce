@@ -11,6 +11,13 @@
     margin: 0;
     padding:0;
   }
+  .errorCreate2{
+    color:#b9282887;
+    padding-left: 20%;
+    font-size: 12px;
+  
+    
+  }
   
   body {
     font-family: "Roboto", sans-serif;
@@ -441,6 +448,7 @@ footer {
     padding-right: 8%;
     margin-left: 7px;
   }
+ 
 
  
 
