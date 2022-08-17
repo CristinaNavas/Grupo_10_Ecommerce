@@ -5,6 +5,7 @@ const bcryptjs = require('bcryptjs')
 const User = require('../models/User');
 //
 const db = require("../database/models");
+const { validationResult }=require("express-validator");
 const sequelize = db.sequelize;
 
 const controller={
@@ -23,7 +24,14 @@ const controller={
 
     processRegister: (req,res) => {
         // buscar si el usuario ya exsite
-        db.Usuario.findOne({
+        const resultValidation=validationResult(req);
+        if (resultValidation.errors.length>0){
+            return res.render("register", {
+                errors: resultValidation.mapped(),
+            })
+        }
+
+        /* db.Usuario.findOne({
             where:{
                 email:req.body.email,
             }
@@ -69,8 +77,13 @@ const controller={
                     })
                 }    
             }
-        })
+        }) */
     },
+
+
+
+
+
         /* )
             
               //Corroboro que el usuario haya puesto los 2 passwords iguales

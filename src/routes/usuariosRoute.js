@@ -8,6 +8,8 @@ const multerMiddleware = require("../middlewares/multerMiddleware");
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
+const validations=require("../middlewares/validationsUsers");
+
 router.get("/login", guestMiddleware, usuariosController.login);
 
 router.get("/register", guestMiddleware, usuariosController.register);
@@ -20,7 +22,7 @@ router.get("/register", guestMiddleware, usuariosController.register);
 
 router.get("/allUsers", usuariosController.allUsers)
 
-router.post('/register', multerMiddleware.single("avatar"), usuariosController.processRegister);
+router.post('/register', multerMiddleware.single("avatar"), validations, usuariosController.processRegister);
 
 router.post("/login", usuariosController.loginProcess);
 
@@ -30,7 +32,7 @@ router.get('/logout', usuariosController.logout)
 
 router.get('/editProfile/:id/', usuariosController.editProfile)
 
-router.post('/editProfile/:id/',multerMiddleware.single("avatar"), usuariosController.saveProfile)
+router.post('/editProfile/:id/',multerMiddleware.single("avatar"), validations, usuariosController.saveProfile)
 
 ;
 

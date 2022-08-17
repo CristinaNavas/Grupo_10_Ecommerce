@@ -19,14 +19,7 @@ const upload= multer({storage:storage})
 ////************** Validacion ****************/////
 const {body}=require("express-validator");
 
-const validations=[
-    body("name").notEmpty().withMessage("Ingresa el nombre del producto"),
-    body("price").notEmpty().withMessage("Ingresa el precio producto"),
-    body("discount").notEmpty().withMessage("Ingresa el descuento del producto"),
-    body("type").notEmpty().withMessage("Selecciona el tipo del producto"),
-    body("category").notEmpty().withMessage("Selecciona la categoría del producto"),
-    body("description").notEmpty().withMessage("Ingresa una descripción"),
-];
+const validations=require("../middlewares/validationsProducto");
 
 
 // ************ Controller Require ************
@@ -39,11 +32,11 @@ router.get("/", productosController.productos);
 router.get("/detail/:id",productosController.productDetail);
 //Rutas crear
 router.get("/create",productosController.productCreate);
-router.post("/create", upload.single("image"),productosController.productSave);
+router.post("/create", upload.single("image"),  validations, productosController.productSave);
 
 //Rutas Editar
 router.get("/edit/:id/",productosController.productEdit);
-router.put("/edit/:id/", upload.single("image"),productosController.productModify);
+router.put("/edit/:id/", upload.single("image") ,validations, productosController.productModify);
 
 //Ruta Eliminar
 router.delete("/delete/:id/",productosController.destroy);

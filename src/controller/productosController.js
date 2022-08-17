@@ -6,8 +6,6 @@ const { validationResult }=require("express-validator");
 
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 
-
-
 const db = require("../database/models");
 const sequelize = db.sequelize;
 
@@ -34,6 +32,14 @@ const controller = {
         res.render("productCreate");
     },
     productSave:(req,res) => {
+        const resultValidation=validationResult(req);
+        if (resultValidation.errors.length>0){
+            return res.render("productCreate",{
+                errors:resultValidation.mapped(),
+                oldData:req.body
+            })
+        }
+             
         db.Producto.create({
             name: req.body.name,
             description: req.body.description,
@@ -43,17 +49,28 @@ const controller = {
             type: req.body.type,
             productsCategory_id: req.body.category,
  
-        });
+        })
+        .then((respuesta)=>{
+            res.redirect("/");
+        })
 
-        res.redirect("/");
     },
     productEdit:(req,res) => {
         db.Producto.findByPk(req.params.id)
             .then(function(producto) {
+                res.send(producto)
                 res.render('productEdit', {productToEdit:producto});
             })
     },
     productModify:(req,res) => {
+        const resultValidation=validationResult(req);
+        if (resultValidation.errors.length>0){
+            return res.render("productCreate",{
+                errors:resultValidation.mapped(),
+                oldData:req.body
+            })
+        }
+        
         db.Producto.update({
             name: req.body.name,
             description: req.body.description,

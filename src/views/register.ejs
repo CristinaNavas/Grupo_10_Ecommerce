@@ -7,29 +7,41 @@
         <form class="form-register" action="/usuarios/register" method="POST" enctype="multipart/form-data">
             <h2>Registro de Usuario</h2>
             <div>
-                <input class="nombreYapellido" type="text" name="name" placeholder="Nombre">   
+                <input class="nombreYapellido" type="text" name="name" placeholder="Nombre">  
+                <% if (locals.errors && errors.name) { %>
+                    <p class="errorCreate"><%= errors.name.msg%></p>          
+                <% } %> 
             </div>
             <div>
-                <input class="nombreYapellido" type="text" name="lastname" placeholder="Apellido">   
+                <input class="nombreYapellido" type="text" name="lastname" placeholder="Apellido">  
+                <% if (locals.errors && errors.lastname) { %>
+                    <p class="errorCreate"><%= errors.lastname.msg%></p>          
+                <% } %>  
             </div>
 
             <div>
                 <input class="nombre-de-usuario" type="text" name="nickname" id="nombre-usuario" placeholder="Nombre de usuario">
+                <% if (locals.errors && errors.nickname) { %>
+                    <p class="errorCreate"><%= errors.nickname.msg%></p>          
+                <% } %> 
             </div>
 
             <div>
                 <label for="email"></label>
-                 <input class="email" type="email" required  placeholder="email" name="email"  id="email">
+                 <input class="email" type="email"  placeholder="email" name="email"  id="email">
                  <% if (locals.errors && locals.errors.email) { %>
-                    <p class="emailError">
+                    <p class="errorCreate">
                       <%= errors.email.msg%>
                     </p>
-                    <% } %>
-               </div>
+                <% } %>
+            </div>
 
 
             <div class="label-fecha-nacimiento">
                 <label for="birthdate"><strong >Fecha de nacimiento</strong></label>
+                <% if (locals.errors && errors.birthday) { %>
+                    <p class="errorCreate"><%= errors.birthday.msg%></p>          
+                <% } %> 
             </div>
             <div>
                 <input class="input-fecha-nacimiento border-radius-boxes" type="date" name="birthday" id="birthdate">
@@ -37,13 +49,15 @@
 
             <div >
                 <input class="domicilio" type="text" name="address" id="domicilio" placeholder="Domicilio">
+                <% if (locals.errors && errors.address) { %>
+                    <p class="errorCreate"><%= errors.address.msg%></p>          
+                <% } %> 
             </div>
 
             <div class="label-perfil-usuario">
                 <label  for="perfil-usuario"><strong >Perfil de usuario</strong></label>
             </div>
                 
-            
             <div>    
                 <div class="input1-perfil-usuario">
                     <label for="comprador">Comprador</label>
@@ -63,21 +77,27 @@
             </div>
 
             <div class="div-foto-usuario">    
-                <input class="foto-usuario" type="file" name="avatar" accept=".jpg" id="fotoUsuario" required>
+                <input class="foto-usuario" type="file" name="avatar" accept=".jpg" id="fotoUsuario">
             </div>
             <div>
                 <input class="contraseña" type="password" name="password" id="contraseña" placeholder="Elegí tu contraseña">
+                <% if (locals.errors && errors.password) { %>
+                    <p class="errorCreate"><%= errors.password.msg%></p>          
+                <% } %> 
             </div>
             
 
             <div>
                 <input class="contraseña" type="password" name="password2" id="contraseña" placeholder="Confirmar contraseña">
+                <% if (locals.errors && errors.password2) { %>
+                    <p class="errorCreate"><%= errors.password2.msg%></p>          
+                <% } %> 
             </div>
-            <% if (locals.errors && locals.errors.password) { %>
+            <!-- <% if (locals.errors && locals.errors.password) { %>
                 <p class="emailError">
                   <%= errors.password.msg%>
                 </p>
-                <% } %>
+                <% } %> -->
 
 
 

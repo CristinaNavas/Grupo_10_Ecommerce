@@ -5,12 +5,16 @@
     <main  class="form"> 
 
         <h2>Crear un Producto</h2>
-
+        <div class="errores">
+          <ul>
+            
+          </ul>
+        </div>
         <form action="/productos/create" method="POST" enctype="multipart/form-data">
             <!-- Nombre -->
             <div class="labInp" >
               <label class="lab" for="name">Producto</label>
-              <input class="inp <% locals.errors && errors.name ? "bordeFail" :null %> " type="text" placeholder="Guitarra" name="name"  id="name" >
+              <input class="inp <% locals.errors && errors.name ? "bordeFail" :null %> " type="text" placeholder="Guitarra" value="<%= locals.oldData ? oldData.name : null %>"  name="name"  id="name" >
               <% if (locals.errors && errors.name) { %>
                 <p class="errorCreate"><%= errors.name.msg%></p>          
               <% } %>
@@ -18,7 +22,7 @@
             <!-- Precio -->
             <div class="labInp">
               <label class="lab" for="price">Precio</label>
-              <input class="inp" type="number" placeholder="($)100" name="price"  id="price" />
+              <input class="inp" type="number" placeholder="($)100" value="<%= locals.oldData ? oldData.price : null %>" name="price"  id="price" />
               <% if (locals.errors && errors.price) { %>
                 <p class="errorCreate"><%= errors.price.msg%></p>          
               <% } %>
@@ -27,7 +31,7 @@
             <!-- Descuento -->
             <div class="labInp">
               <label class="lab" for="discount">Descuento</label>
-              <input class="inp" type="number" placeholder="10(%)" name="discount"  id="discount" />
+              <input class="inp" type="number" placeholder="10(%)" value="<%= locals.oldData ? oldData.discount : null %>" name="discount"  id="discount" />
               <% if (locals.errors && errors.discount) { %>
                 <p class="errorCreate"><%= errors.discount.msg%></p>          
               <% } %>
@@ -37,10 +41,10 @@
             <div class="labInp">
               <label class="lab" for="type" class="">Tipo</label>
               <select name="type" id="type" class="inp">
-                <option value="cuerdas">Cuerdas</option>
-                <option value="viento">Viento</option>
-                <option value="percusion">Percusión</option>
-                <option value="electrico">Eléctrico</option>
+                <option value="cuerdas" <%= locals.oldData && oldData.type== "cuerdas" ? "selected": null %>>Cuerdas</option>
+                <option value="viento" <%= locals.oldData && oldData.type== "viento" ? "selected": null %>>Viento</option>
+                <option value="percusion" <%= locals.oldData && oldData.type== "percusion" ? "selected": null %>>Percusión</option>
+                <option value="electrico" <%= locals.oldData && oldData.type== "electrico" ? "selected": null %>>Eléctrico</option>
               </select>
               <% if (locals.errors && errors.type) { %>
                 <p class="errorCreate"><%= errors.type.msg%></p>          
@@ -52,8 +56,8 @@
               <label class="lab" for="category" class="form-label">Categoría:</label>
               <select name="category" id="category" class="inp">
                 <option value="">Elegí</option>
-                <option value="in-sale">En oferta</option>
-                <option value="visited">Últimos agregados</option>
+                <option value="1" <%= locals.oldData && oldData.category== "1" ? "selected": null %>>En oferta</option>
+                <option value="2" <%= locals.oldData && oldData.category== "2" ? "selected": null %>>Últimos agregados</option>
               </select>
               <% if (locals.errors && errors.category) { %>
                 <p class="errorCreate"><%= errors.category.msg%></p>          
@@ -63,7 +67,7 @@
             <!-- Descripción -->
             <div class="labInp">
               <label class="lab" for="description">Descripción</label>
-              <input class="inp" type="textarea" maxlenght="100" placeholder="Nuevo" name="description"  id="description">
+              <input class="inp" type="textarea" maxlenght="100" placeholder="Nuevo" name="description" value="<%= locals.oldData ? oldData.description : null %>" id="description">
               <% if (locals.errors && errors.description) { %>
                 <p class="errorCreate"><%= errors.description.msg%></p>          
               <% } %>
@@ -73,6 +77,10 @@
             <div class="labInp">
               <label class="lab" for="image">Imagen</label>
               <input class="inp" type="file" name="image"  id="image">
+              <% if (locals.errors && errors.image) { %>
+                <p class="errorCreate"><%= errors.image.msg%></p>          
+              <% } %>
+
             </div>
 
             <!-- Botón -->
@@ -83,6 +91,8 @@
           </form>
     </main>
 
+    <script src="/js/productCreate.js"></script>
+    
     <%- include("./partials/footer") %>
 </body>
 
