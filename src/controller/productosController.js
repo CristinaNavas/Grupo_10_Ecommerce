@@ -32,6 +32,7 @@ const controller = {
         res.render("productCreate");
     },
     productSave:(req,res) => {
+
         const resultValidation=validationResult(req);
         if (resultValidation.errors.length>0){
             return res.render("productCreate",{
@@ -53,7 +54,7 @@ const controller = {
         .then((respuesta)=>{
             res.redirect("/");
         })
-
+       
     },
     productEdit:(req,res) => {
         db.Producto.findByPk(req.params.id)
@@ -63,14 +64,16 @@ const controller = {
             })
     },
     productModify:(req,res) => {
-        const resultValidation=validationResult(req);
-        if (resultValidation.errors.length>0){
-            return res.render("productCreate",{
-                errors:resultValidation.mapped(),
-                oldData:req.body
-            })
-        }
-        
+
+        const resultValidation = validationResult(req);
+            if (resultValidation.errors.length > 0){
+                console.log(resultValidation.errors.length, resultValidation.errors);
+                res.render("productEdit", {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body,
+                     });
+            }
+
         db.Producto.update({
             name: req.body.name,
             description: req.body.description,
@@ -83,17 +86,24 @@ const controller = {
             where: {
                 id: req.params.id
             }
-        });
-        res.redirect("/");
+
+        })
+        .then((result)=>{
+            res.redirect("/");
+        })
+            
     },
     destroy : (req, res) => {
         db.Producto.destroy({
             where: {
                 id: req.params.id //Si le pongo la coma marca error
             } 
-        });
+        })
+        
 
-        res.redirect('/');
+        .then((result)=>{
+            res.redirect("/");
+        })
     },
     delete:(req,res)=>{
         res.send("Hola");

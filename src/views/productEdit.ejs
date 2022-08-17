@@ -7,6 +7,7 @@
         <h2>Editar el Producto <%= %></h2>
 
         <form action="/productos/edit/<%= productToEdit.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+<<<<<<< HEAD
           <!-- Nombre -->
           <div class="labInp" >
             <label class="lab" for="name">Producto</label>
@@ -83,6 +84,83 @@
           <div class="boton-ingresar" >
              <button class="button-login" type="submit"> Editar</button>  
           </div>    
+=======
+            <!-- Nombre -->
+            <div class="labInp" >
+              <label class="lab " for="name">Producto</label>
+              <input class="inp <%= locals.errors && errors.name ? "bordeFail" : null %>" type="text" required  value="<%= productToEdit.name%>" name="name"  id="name">
+
+              <% if (locals.errors && errors.name) { %>
+                <div class="errorCreate"><p><%= errors.name.msg%></p></div>
+              <% } %>
+            </div>
+            <!-- Precio -->
+            <div class="labInp">
+              <label class="lab" for="price">Precio</label>
+              <input class="inp <%= locals.errors && errors.price ? "bordeFail" : null %>" type="text" required value="<%= productToEdit.price%>" name="price"  id="price" />
+              <% if (locals.errors && errors.price) { %>
+                <p class="errorCreate"><%= errors.price.msg%></p>          
+              <% } %>
+            </div>
+
+            <!-- Descuento -->
+            <div class="labInp">
+              <label class="lab" for="discount">Descuento</label>
+              <input class="inp <%= locals.errors && errors.discount ? "bordeFail" : null %>" type="text" required value="<%= productToEdit.discount%>" name="discount"  id="discount" />
+              <% if (locals.errors && errors.discount) { %>
+                <p class="errorCreate"><%= errors.discount.msg%></p>          
+              <% } %>
+            </div>
+
+            <!-- Tipo -->
+            <div class="labInp">
+              <label class="lab" for="type" class="">Tipo</label>
+              <select name="type" id="type" class="inp">
+                <option value="cuerdas">Cuerdas</option>
+                <option value="viento">Viento</option>
+                <option value="percusion">Percusión</option>
+                <option value="electrico">Eléctrico</option>
+              </select>
+              <% if (locals.errors && errors.type) { %>
+                <p class="errorCreate"><%= errors.type.msg%></p>          
+              <% } %>
+            </div>  
+            <!-- Categoría -->
+            <div class="labInp">
+              <label class="lab" for="category" class="form-label">Categoría:</label>
+              <select name="category" id="category" class="inp">
+                <option value="">Elegí</option>
+                <option value="in-sale">En oferta</option>
+                <option value="visited">Últimos agregados</option>
+              </select>
+              <% if (locals.errors && errors.category) { %>
+                <p class="errorCreate"><%= errors.category.msg%></p>          
+              <% } %>
+            </div>      
+
+            <!-- Descripción -->
+            <div class="labInp">
+              <label class="lab" for="descripcionProducto">Descripción</label>
+              <input class="inp <%= locals.errors && errors.description ? "bordeFail" : null %>" type="textarea" maxlenght="100" value="<%= productToEdit.description%>" name="description"  id="descipcionProducto">
+              <% if (locals.errors && errors.description) { %>
+                <p class="errorCreate"><%= errors.description.msg%></p>          
+              <% } %>
+            </div>
+
+            <!-- Imagen -->
+            <div class="labInp">
+              <label class="lab" for="image">Imagen</label>
+              <input class="inp" type="file" name="image"  id="image">
+              <% if (locals.errors && errors.image) { %>
+                <p class="errorCreate"><%= errors.image.msg%></p>          
+                <% } %>
+            </div>
+
+            <!-- Botón -->
+            <div class="boton-ingresar" >
+               <button class="button-guardar" type="submit"> Guardar </button>  
+            </div>
+>>>>>>> 14202f0e26fa177cfed26670c293b39192e55288
             
         </form>
     </main>

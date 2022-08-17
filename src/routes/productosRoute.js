@@ -17,8 +17,6 @@ const storage=multer.diskStorage({
 })
 const upload= multer({storage:storage})
 ////************** Validacion ****************/////
-const {body}=require("express-validator");
-
 const validations=require("../middlewares/validationsProducto");
 
 
@@ -32,11 +30,14 @@ router.get("/", productosController.productos);
 router.get("/detail/:id",productosController.productDetail);
 //Rutas crear
 router.get("/create",productosController.productCreate);
+
 router.post("/create", upload.single("image"),  validations, productosController.productSave);
 
 //Rutas Editar
 router.get("/edit/:id/",productosController.productEdit);
 router.put("/edit/:id/", upload.single("image") ,validations, productosController.productModify);
+
+
 
 //Ruta Eliminar
 router.delete("/delete/:id/",productosController.destroy);

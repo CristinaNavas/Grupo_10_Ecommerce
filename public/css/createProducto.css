@@ -1,9 +1,30 @@
 .errorCreate{
     color: red;
-    font-size: 10px;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 10px;
 }
 .bordeFail{
     border-color: red;
     border-style: solid;
-    border-width: 1px;
+    
+  
 }
+
+
+.text-danger {
+    color: red;
+    text-align: center;
+     margin-top: -15px;
+    margin-bottom: 15px;
+    
+  } 
+  
+  .is-invalid {
+    border-style: solid;
+    border-color: red;
+    
+    
+    
+  }

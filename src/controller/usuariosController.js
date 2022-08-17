@@ -1,11 +1,9 @@
 // sprint 5
 const path = require("path");
-//const { validationResult } = require('express-validator');
+const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs')
 const User = require('../models/User');
-//
 const db = require("../database/models");
-const { validationResult }=require("express-validator");
 const sequelize = db.sequelize;
 
 const controller={
@@ -21,7 +19,7 @@ const controller={
         let allUsers = User.findAll()
         res.send(allUsers)
     },
-
+  
     processRegister: (req,res) => {
         // buscar si el usuario ya exsite
         const resultValidation=validationResult(req);
@@ -219,12 +217,12 @@ const controller={
     },
     saveProfile: (req,res)=>{
         db.Usuario.update({
-                name: req.body.name, //En register.ejs figura nombre y apellido. Corregir.
-                lastname: req.body.lastname, //En register.ejs figura nombreUsario
+                name: req.body.name, 
+                lastname: req.body.lastname, 
                 email: req.body.email,
                 nickname:req.body.nickname,
                 birthday: req.body.birthday,
-                address: req.body.address, //figura como domicilio
+                address: req.body.address, 
                 avatar: req.file.filename,
                 password: bcryptjs.hashSync(req.body.password, 10),
                 usersProfile_id: req.body.userProfile_id,

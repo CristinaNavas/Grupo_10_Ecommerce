@@ -7,12 +7,32 @@
         <form class="form-register" action="/usuarios/register" method="POST" enctype="multipart/form-data">
             <h2>Registro de Usuario</h2>
             <div>
+<<<<<<< HEAD
                 <input class="nombreYapellido" type="text" name="name" placeholder="Nombre">  
                 <% if (locals.errors && errors.name) { %>
                     <p class="errorCreate"><%= errors.name.msg%></p>          
+=======
+                <div>
+                    <input class="nombreYapellido
+                    <%= locals.errores && errores.name ? "is-invalid" : null %>" 
+                    type="text" name="name" placeholder="Nombre"
+                    value= "<%= locals.oldData ? oldData.name : null %>"
+                    >   
+                </div>
+
+                <% if(locals.errores && errores.name){ %>
+                    <div class="text-danger">
+                        <p><%= errores.name.msg %></p> 
+                    </div>
+>>>>>>> 14202f0e26fa177cfed26670c293b39192e55288
                 <% } %> 
             </div>
+
+
+
+
             <div>
+<<<<<<< HEAD
                 <input class="nombreYapellido" type="text" name="lastname" placeholder="Apellido">  
                 <% if (locals.errors && errors.lastname) { %>
                     <p class="errorCreate"><%= errors.lastname.msg%></p>          
@@ -23,10 +43,58 @@
                 <input class="nombre-de-usuario" type="text" name="nickname" id="nombre-usuario" placeholder="Nombre de usuario">
                 <% if (locals.errors && errors.nickname) { %>
                     <p class="errorCreate"><%= errors.nickname.msg%></p>          
+=======
+                <div>
+                    <input class="nombre-de-usuario 
+                    <%= locals.errores && errores.lastname ? "is-invalid" : null %>" 
+                    type="text" 
+                    name="lastname" 
+                    id="nombre-usuario" 
+                    placeholder="Apellido"
+                    value= "<%= locals.oldData ? oldData.lastname : null %>"
+                    >
+                </div>
+
+                <% if(locals.errores && errores.lastname){ %>
+                    <div class="text-danger">
+                        <p><%= errores.lastname.msg %></p> 
+                    </div>
                 <% } %> 
             </div>
 
             <div>
+                <div>
+                    <input class="nombre-de-usuario 
+                    <%= locals.errores && errores.nickname ? "is-invalid" : null %>" 
+                    type="text" 
+                    name="nickname" 
+                    id="nombre-usuario" 
+                    placeholder="Nombre de usuario"
+                    value= "<%= locals.oldData ? oldData.nickname : null %>"
+                    >
+                </div>
+
+                <% if(locals.errores && errores.nickname){ %>
+                    <div class="text-danger">
+                        <p> <%= errores.nickname.msg %></p>
+                    </div>
+>>>>>>> 14202f0e26fa177cfed26670c293b39192e55288
+                <% } %> 
+            </div>
+
+           
+
+            <!-- <div>
+                <div>
+                     <label for="email"></label> 
+                     <input class="email <%= locals.errores && errores.email ? "is-invalid" : null %>" 
+                     type="email" 
+                     placeholder="email" 
+                     name="email"  
+                     id="email"
+                     value= "<%= locals.oldData ? oldData.email : null %>"
+                     >
+                   </div>
                 <label for="email"></label>
                  <input class="email" type="email"  placeholder="email" name="email"  id="email">
                  <% if (locals.errors && locals.errors.email) { %>
@@ -36,6 +104,7 @@
                 <% } %>
             </div>
 
+<<<<<<< HEAD
 
             <div class="label-fecha-nacimiento">
                 <label for="birthdate"><strong >Fecha de nacimiento</strong></label>
@@ -43,15 +112,85 @@
                     <p class="errorCreate"><%= errors.birthday.msg%></p>          
                 <% } %> 
             </div>
+=======
+                   <% if(locals.errores && errores.email){ %>
+                      <div class="text-danger">
+                         <%= errores.email.msg %> 
+                      </div>
+                   <% } %> 
+            </div> -->
+>>>>>>> 14202f0e26fa177cfed26670c293b39192e55288
             <div>
-                <input class="input-fecha-nacimiento border-radius-boxes" type="date" name="birthday" id="birthdate">
+
+                <div>
+                    <input class="email <%= locals.errores && errores.email ? "is-invalid" : null %>" 
+                    type="email" 
+                    placeholder="email" 
+                    name="email"  
+                    id="email"
+                    value= "<%= locals.oldData ? oldData.email : null %>"
+                    >
+                </div>
+    
+                  <% if(locals.errores && errores.email){ %>
+                    <div class="text-danger">
+                       <%= errores.email.msg %> 
+                    </div>
+                 <% } %> 
+
+                 <% if (locals.errors && locals.errors.email) { %>
+                    <p class="emailError">
+                      <%= errors.email.msg%>
+                    </p>
+                    <% } %>
             </div>
 
+<<<<<<< HEAD
             <div >
                 <input class="domicilio" type="text" name="address" id="domicilio" placeholder="Domicilio">
                 <% if (locals.errors && errors.address) { %>
                     <p class="errorCreate"><%= errors.address.msg%></p>          
                 <% } %> 
+=======
+            <div>
+                <div class="label-fecha-nacimiento">
+                    <label for="birthdate"><strong >Fecha de nacimiento</strong></label>
+                </div>
+                <div>
+                    <input class="input-fecha-nacimiento border-radius-boxes 
+                    <%= locals.errores && errores.birthday ? "is-invalid" : null %>" 
+                    type="date" 
+                    name="birthday" 
+                    id="birthdate"
+                    value= "<%= locals.oldData ? oldData.birthday : null %>"
+                    >
+                </div>
+
+                <% if(locals.errores && errores.birthday){ %>
+                    <div class="text-danger">
+                       <%= errores.birthday.msg %> 
+                    </div>
+                 <% } %> 
+            </div>              
+
+            <div>
+                <div >
+                    <input class="domicilio 
+                    <%= locals.errores && errores.address ? "is-invalid" : null %>" 
+                    type="text" 
+                    name="address" 
+                    id="domicilio" 
+                    placeholder="Domicilio"
+                    value= "<%= locals.oldData ? oldData.address : null %>"
+                    >
+                </div>
+
+                <% if(locals.errores && errores.address){ %>
+                    <div class="text-danger">
+                       <%= errores.address.msg %> 
+                    </div>
+                 <% } %> 
+>>>>>>> 14202f0e26fa177cfed26670c293b39192e55288
             </div>
 
             <div class="label-perfil-usuario">
@@ -71,6 +210,7 @@
                 
             </div>
 
+<<<<<<< HEAD
             
             <div  class="label-foto-usuario">
                 <label for="fotoUsuario"><strong >Cargar foto de usuario</strong></label>
@@ -98,8 +238,87 @@
                   <%= errors.password.msg%>
                 </p>
                 <% } %> -->
+=======
+            <div>
 
+                <div  class="label-foto-usuario">
+                    <label for="fotoUsuario"><strong >Cargar foto de usuario</strong></label>
+                </div>
+    
+                <div>
+                    <div class="div-foto-usuario" >    
+                        <input class="foto-usuario 
+                        <%= locals.errores && errores.avatar ? "is-invalid" : null %>" 
+                        type="file" 
+                        name="avatar" 
+                        id="fotoUsuario"
+                        value= "<%= locals.oldData ? oldData.avatar : null %>"
+                        accept= ".jpg"
+                        >
+                    </div> 
+    
+                    <% if(locals.errores && errores.avatar){ %>
+                        <div class="text-danger">
+                            <%= errores.avatar.msg %> 
+                        </div>
+                    <% } %>  
+                </div>
+                
+            </div>  
 
+            <div>
+                <div>
+                    <input class="contraseña 
+                    <%= locals.errores && errores.password ? "is-invalid" : null %>" 
+                    type="password" 
+                    name="password" 
+                    id="contraseña" 
+                    placeholder="Elegí tu contraseña"
+                    value= "<%= locals.oldData ? oldData.password : null %>"
+                    >
+                </div>
+
+                <% if(locals.errores && errores.password){ %>
+                    <div class="text-danger">
+                       <%= errores.password.msg %> 
+                    </div>
+                 <% } %> 
+
+                 <% if (locals.errors && locals.errors.password) { %>
+                    <p class="text-danger">
+                    <%= errors.password.numberCharacters%>
+                    </p>
+                <% } %> 
+
+            </div>
+>>>>>>> 14202f0e26fa177cfed26670c293b39192e55288
+
+            <div>
+                <div>
+                    <input class="contraseña 
+                    <%= locals.errores && errores.password2 ? "is-invalid" : null %>" 
+                    type="password" 
+                    name="password2" 
+                    id="contraseña" 
+                    placeholder="Confirmar contraseña"
+                    value= "<%= locals.oldData ? oldData.password2 : null %>"
+                    >
+                </div>
+
+                <% if(locals.errores && errores.password2){ %>
+                    <div class="text-danger">
+                       <%= errores.password2.msg %> 
+                    </div>
+                <% } %> 
+            
+                <% if (locals.errors && locals.errors.password) { %>
+                    <p class="text-danger">
+                    <%= errors.password.msg%>
+                    </p>
+                <% } %> 
+            
+
+            </div>
 
             <div class="divBotonEnviar">
                 <button class="botonEnviar">Enviar</button>
@@ -114,4 +333,3 @@
 </body>
 
 </html>
-    

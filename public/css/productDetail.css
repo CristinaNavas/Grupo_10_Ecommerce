@@ -31,11 +31,14 @@ main .container{
     width: 100%;
     align-items: center;
     margin: 2%; 
+    
 }
 .botonCompra{
     width: 50%;
     padding: 15px;
     border-radius: 5px;
+    
+    
   
 }
 
@@ -43,12 +46,30 @@ main .container{
     width: 50%;
     padding: 15px;
     border-radius: 5px;
+    
 }
 .BD{
     width: 100%;
+    background-color:#d4a40d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1%;
+    margin-top: 40%;
+    margin-left: 2%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 .botonEliminar{
-    width: 100%;
+    width: 95%;
+    background-color:#d4a40d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-bottom:10%;
+    padding: 1%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    
 }
 section{
     font-size: 24px;
@@ -153,6 +174,7 @@ section{
 }
 .btn:hover{
     background-color: rgba(0,0,0,.1);
+    
 }
 
 
