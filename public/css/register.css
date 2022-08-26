@@ -155,7 +155,7 @@ h2 {
 
  .label-fecha-nacimiento {
     margin-left: 20%;
-    margin-bottom: 5px;
+    margin-bottom: 12px;
 }  
 
 .input-fecha-nacimiento {
@@ -166,7 +166,7 @@ h2 {
     border: none;
     border-radius: 5px;
     font-size: 12px;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
     font-weight: bold;
     margin-left: 20%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -197,13 +197,13 @@ h2 {
 
 .label-perfil-usuario {
     margin-left: 20%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 
 .label-foto-usuario {
     margin-left: 20%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .foto-usuario {
@@ -230,7 +230,7 @@ h2 {
     border: none;
     border-radius: 5px;
     font-size: 12px;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
     font-weight: bold;
     margin-left: 20%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -244,7 +244,7 @@ h2 {
     border: none;
     border-radius: 5px;
     font-size: 12px;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
     font-weight: bold;
     margin-left: 20%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -263,12 +263,12 @@ h2 {
         border-radius: 5px;
         width: 60%; 
         margin-left: 20%;
-        margin-bottom:10%;
+       /*  margin-bottom:10%; */
     
 }
 
 .botonEnviar:hover {
-    background-color: #0022AA;
+    background-color: #524a2f;
 }
 
 .text-danger {
@@ -282,6 +282,7 @@ h2 {
 .is-invalid {
   border-style: solid;
   border-color: red;
+  }
 
 /* *********** Estilos Footer *************** */
 
