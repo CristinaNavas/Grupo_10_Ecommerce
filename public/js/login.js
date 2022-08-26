@@ -10,13 +10,13 @@ window.addEventListener('load', function(){
         let errores =[];
 
         let campoEmail = document.querySelector("input#email");
-        let emailValid = /^(([^<>()[]\.,;:\s@"]+(.[^<>()[]\.,;:\s@"]+))|(".+"))@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-0-9]+.)+[a-zA-Z]{2,}))$/;
+        let emailValid = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let emailPath = campoEmail.value;
         //console.log(campoNombre);
         if(campoEmail.value ==""){
             errores.push("el campo del email tiene que estar completo")
             
-            alert("el campo del número tiene que estar completo")
+            
         }else if(!emailValid.exec(emailPath)){
             errores.push("Favor ingresar un email válido")
         }
@@ -26,7 +26,7 @@ window.addEventListener('load', function(){
         //console.log(campoNombre);
         if(campoPassword.value ==""){
             errores.push("el campo del password tiene que estar completo")
-            /* alert("el campo del número tiene que estar completo") */
+           
         }
 
 

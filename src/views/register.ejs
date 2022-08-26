@@ -6,14 +6,18 @@
         
         <form class="form-register" action="/usuarios/register" method="POST" enctype="multipart/form-data">
             <h2>Registro de Usuario</h2>
+            <div class="errores">
+                <ul>
+                </ul>
+            </div>
             <div>
-                <input class="nombreYapellido" type="text" name="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">  
+                <input class="nombreYapellido" type="text" id="name" name="name" placeholder="Nombre" value="<%= locals.oldData ? oldData.name : null %>">  
                 <% if (locals.errors && errors.name) { %>
                     <p class="errorCreate2"><%= errors.name.msg%></p>          
                 <% } %> 
             </div>
             <div>
-                <input class="nombreYapellido" type="text" name="lastname" placeholder="Apellido" value="<%= locals.oldData ? oldData.lastname : null %>">  
+                <input class="nombreYapellido" type="text" id="lastname" name="lastname" placeholder="Apellido" value="<%= locals.oldData ? oldData.lastname : null %>">  
                 <% if (locals.errors && errors.lastname) { %>
                     <p class="errorCreate2"><%= errors.lastname.msg%></p>          
                 <% } %>  
@@ -115,9 +119,9 @@
         </form>
         
     </main>
-
+    <script src="/js/register.js" type="text/javascript"></script>
     <%- include("./partials/footer") %>
-    <script src="/js/register.js"></script>
+    
 </body>
 
 </html>

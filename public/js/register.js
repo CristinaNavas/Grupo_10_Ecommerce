@@ -1,3 +1,5 @@
+console.log('saludos desde el front');
+
 window.addEventListener('load', function(){
     let formulario = document.querySelector("form");
     console.log(formulario)
