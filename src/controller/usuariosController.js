@@ -237,6 +237,9 @@ const controller={
         });
         res.redirect("/");
     },
+    notFound:(req,res)=>{
+        res.render("notFound");
+    },
     
 
 }

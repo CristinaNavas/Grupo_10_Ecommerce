@@ -1,0 +1,18 @@
+/* *************** Estilos Main ******************* */
+
+.notFound {
+    width: 90%;
+   
+    padding: 5%;
+  
+}
+
+.notfoundContenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.notFoundH2{
+  padding:2%
+}

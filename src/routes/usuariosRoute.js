@@ -38,6 +38,8 @@ router.get('/editProfile/:id/', usuariosController.editProfile);
 
 router.post('/editProfile/:id/',multerMiddleware.single("avatar"), usuariosController.saveProfile);
 
+router.get('/notFound', usuariosController.notFound);
+
 
 /* 
 
