@@ -6,6 +6,9 @@ const path=require("path");
 // ************ Middlewares - (don't touch) ************
 const multer=require("multer");
 
+// ************ Middlewares - Autorización ************
+const authMiddleware = require('../middlewares/authMiddleware');
+
 // ************ Multer Configuration ************
 const storage=multer.diskStorage({
     destination: (req,file,cb)=>{
@@ -23,18 +26,18 @@ const validations=require("../middlewares/validationsProducto");
 // ************ Controller Require ************
 const productosController=require("../controller/productosController.js");
 
-router.get("/carrito",productosController.carrito);
+router.get("/carrito", authMiddleware, productosController.carrito);
 
 router.get("/", productosController.productos);
 
 router.get("/detail/:id",productosController.productDetail);
 //Rutas crear
-router.get("/create",productosController.productCreate);
+router.get("/create", authMiddleware ,productosController.productCreate);
 
 router.post("/create", upload.single("image"),  validations, productosController.productSave);
 
 //Rutas Editar
-router.get("/edit/:id/",productosController.productEdit);
+router.get("/edit/:id/", authMiddleware, productosController.productEdit);
 router.put("/edit/:id/", upload.single("image"), validations, productosController.productModify);
 
 
