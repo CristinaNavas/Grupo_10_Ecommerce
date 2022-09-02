@@ -65,9 +65,10 @@ const controller = {
     productModify:(req,res) => {
         const resultValidation=validationResult(req);
         if (resultValidation.errors.length>0){
-            return res.render("productCreate",{
+            return res.render("productEdit",{
                 errors:resultValidation.mapped(),
-                oldData:req.body
+                oldData:req.body,
+                productToEdit:req.body
             })
         }
         

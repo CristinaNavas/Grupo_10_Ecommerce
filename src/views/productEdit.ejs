@@ -5,7 +5,11 @@
     <main  class="form"> 
 
         <h2>Editar el Producto <%= %></h2>
-
+        <div class="errores">
+          <ul>
+            
+          </ul>
+        </div>
         <form action="/productos/edit/<%= productToEdit.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
           <!-- Nombre -->
           <div class="labInp" >
@@ -86,6 +90,9 @@
             
         </form>
     </main>
+
+    <script src="/js/productCreate.js"></script>
+    
 
     <%- include("./partials/footer") %>
 </body>

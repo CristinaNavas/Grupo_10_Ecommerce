@@ -12,12 +12,18 @@ const sequelize = db.sequelize;
 const apiController = {
 
     allUsers: (req, res) => {
-        db.Usuario.findAll()
+        db.Usuario.findAll({raw:true})
         .then(usuarios => {
+            /* console.log(usuarios) */
+            usuarios.forEach( user => {
+                return user.detailUrl = `http://localhost:3100/api/users/${user.id}`
+            })
             return res.status(200).json({
                 count: usuarios.length,
                 url : `http://localhost:3100/api/users`,
-                users: usuarios
+                users: usuarios,
+          
+                    
                 })
             })
             //res.send(usuarios)  
@@ -49,9 +55,11 @@ const apiController = {
     }, 
 
     allProducts: (req, res) => {
-        db.Producto.findAll()
+        db.Producto.findAll({raw:true})
         .then(productos => {
-
+            productos.forEach( producto => {
+                return producto.detailUrl = `http://localhost:3100/api/products/${producto.id}`
+            })
             let types = productos.map(item =>{
                 return item.type
                 });
