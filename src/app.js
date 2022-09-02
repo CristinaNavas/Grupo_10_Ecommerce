@@ -44,5 +44,9 @@ app.use("/productos",productosRoute);
 
 app.use("/usuarios",usuariosRoute);
 
+// --------------- sprin t8 ------------- //
+const apiRoute = require("./routes/apiRoute.js");
+app.use('/api', apiRoute);
+
 
 
