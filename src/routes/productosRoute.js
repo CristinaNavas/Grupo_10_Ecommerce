@@ -42,6 +42,6 @@ router.put("/edit/:id/", upload.single("image"), validations, productosControlle
 
 
 //Ruta Eliminar
-router.delete("/delete/:id/",productosController.destroy);
+router.delete("/delete/:id/",authMiddleware, productosController.destroy);
 
 module.exports=router;

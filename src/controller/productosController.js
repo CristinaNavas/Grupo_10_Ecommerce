@@ -61,13 +61,19 @@ const controller = {
             .then(function(producto) {
                 res.render('productEdit', {productToEdit:producto});
             })
-    },
+        },
     productModify:(req,res) => {
         const resultValidation=validationResult(req);
+        db.Producto.findByPk(req.params.id)
+            .then(function(producto) {
+                res.render('productEdit', {productToEdit:producto});
+            })
+        
         if (resultValidation.errors.length>0){
-            return res.render("productCreate",{
+            return res.render({
                 errors:resultValidation.mapped(),
-                oldData:req.body
+                /* oldData:req.body, */
+                productToEdit: producto
             })
         }
         

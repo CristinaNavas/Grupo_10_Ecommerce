@@ -132,8 +132,9 @@ h2 {
 }
 
 .button-login2:hover {
-  background-color: #0022aa;
-  color: white;
+    background-color:#524a2f;
+    color: white;
+    font-weight: bold;
 }
 
 .olvido-contarseña{

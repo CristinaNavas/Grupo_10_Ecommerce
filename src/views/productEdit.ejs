@@ -4,7 +4,14 @@
 
     <main  class="form"> 
 
-        <h2>Editar el Producto <%= %></h2>
+        <h2>Editar el Producto <%= productToEdit.name%></h2>
+
+     
+        <div class="errores">
+          <ul>
+            
+          </ul>
+        </div>
 
         <form action="/productos/edit/<%= productToEdit.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
           <!-- Nombre -->
@@ -81,11 +88,12 @@
 
           <!-- Botón -->
           <div class="boton-ingresar" >
-             <button class="button-login2" type="submit"> Editar</button>  
+             <button class="button-login2" type="submit">Guardar</button>  
           </div>    
             
         </form>
     </main>
+    <script src="/js/productCreate.js"></script>
 
     <%- include("./partials/footer") %>
 </body>
