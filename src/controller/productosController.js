@@ -70,17 +70,13 @@ const controller = {
             })
         
         if (resultValidation.errors.length>0){
-<<<<<<< HEAD
-            return res.render({
-                errors:resultValidation.mapped(),
-                /* oldData:req.body, */
-                productToEdit: producto
-=======
+
+
             return res.render("productEdit",{
                 errors:resultValidation.mapped(),
                 oldData:req.body,
-                productToEdit:req.body
->>>>>>> f0f99cffa0601767db75f3d8141a23b7e2659976
+                productToEdit:producto
+
             })
         }
         
