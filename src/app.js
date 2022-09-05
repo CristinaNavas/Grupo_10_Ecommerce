@@ -48,5 +48,3 @@ app.use("/usuarios",usuariosRoute);
 const apiRoute = require("./routes/apiRoute.js");
 app.use('/api', apiRoute);
 
-
-
