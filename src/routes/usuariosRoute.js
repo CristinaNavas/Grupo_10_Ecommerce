@@ -30,7 +30,7 @@ router.post('/register', multerMiddleware.single("avatar"), validationsRegister,
 
 router.post("/login", validationsLogin, usuariosController.loginProcess);
 
-router.get('/profile', authMiddleware, usuariosController.profile);
+router.get('/profile', usuariosController.profile);
 
 router.get('/logout', usuariosController.logout);
 

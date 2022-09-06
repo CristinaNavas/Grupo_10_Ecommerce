@@ -163,7 +163,8 @@ const controller={
                         delete userLogin.password;
                         delete userLogin.password2;
                         req.session.userLogged=userLogin; //OK
-                        res.render("profile", {user:userLogin})
+                        
+                        res.redirect("/usuarios/profile"); 
                     }
                     else{
                         res.render("login",{
@@ -195,9 +196,16 @@ const controller={
     },
 
     profile: (req,res)=>{
+        db.Usuario.findOne({
+            where:{
+                email:req.session.userLogged.email,
+            }
+        }).then ((userLogin)=>{
+        
         res.render("profile",{
-            "user": req.session.userLogged,
+            user: userLogin,
         });
+      })
     },
 
     logout: (req, res) => {
