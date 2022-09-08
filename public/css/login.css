@@ -373,15 +373,18 @@ padding: 4% 3% 2% 4%;
     box-shadow: 0px 0px 10px rgb(100, 100, 100)
   }
   
+ 
+
   .button-login {
     background-color:#d4a40d;
     color: white;
     border: none;
     padding: 5px 5px;
     border-radius: 5px;
-    width: 58%;
-    margin-left: 25%;
-    margin-bottom:10%;
+    width: 60%;
+    margin-left: 20%;
+    /* margin-left: 25%;
+    margin-bottom:10%; */
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     
   }

@@ -22,6 +22,9 @@ const controller={
     },
     quienes: (req,res)=>{
         res.render("quienes");
+    },
+    piano: (req, res)=>{
+        res.render("piano")
     }
 }
 module.exports=controller

@@ -1,0 +1,45 @@
+<%- include("./partials/head") %>
+
+    <%- include("./partials/header") %>
+    <body class="bodypiano">
+       
+      <main class="pcontainer">
+          <h1 class="pianoH">Piano</h1>
+
+          <ul class="set" id="ulPiano">
+            <li onclick=" jsNota(174.614)" class="liPiano white b"></li>
+            <li onclick=" jsNota(184.997)" class="liPiano black as"></li>
+            <li onclick=" jsNota(195.998)" class="liPiano white a"></li>
+            <li onclick=" jsNota(207.652)" class="liPiano black gs"></li>
+            <li onclick=" jsNota(220.000)" class="liPiano white g"></li>
+            <li onclick=" jsNota(233.082)" class="liPiano black fs"></li>
+            <li onclick=" jsNota(246.942)" class="liPiano white f"></li>
+            <li onclick=" jsNota(261.626)" class="liPiano white e"></li>
+            <li onclick=" jsNota(277.183)" class="liPiano black ds"></li>
+            <li onclick=" jsNota(293.665)" class="liPiano white d"></li>
+            <li onclick=" jsNota(311.127)" class="liPiano black cs"></li>
+            <li onclick=" jsNota(329.628)" class="liPiano white c"></li>
+          </ul>
+            
+
+        </main>
+            
+      <%- include("./partials/footer") %>
+    
+      <script>
+        var context= new AudioContext();
+ 
+        function jsNota(frecuencia){
+         var o= context.createOscillator();
+         g=context.createGain();
+         o.connect(g);
+         o.type="sawtooth";
+         o.frequency.value=frecuencia;
+         g.connect(context.destination);
+         o.start(0);
+         g.gain.exponentialRampToValueAtTime(0.00001,context.currentTime +1.5);
+     }
+      </script>
+  </body>
+
+</html>
