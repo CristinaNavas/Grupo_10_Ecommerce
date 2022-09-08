@@ -19,6 +19,9 @@ const controller={
         })
         res.render("index",{"producto":productsOferta}); */
         
+    },
+    quienes: (req,res)=>{
+        res.render("quienes");
     }
 }
 module.exports=controller

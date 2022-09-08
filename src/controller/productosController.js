@@ -101,8 +101,6 @@ const controller = {
                 id: req.params.id //Si le pongo la coma marca error
             } 
         })
-        
-
         .then((result)=>{
             res.redirect("/");
         })

@@ -1,0 +1,64 @@
+.qcontainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+
+
+  border-top-width: 10px;
+  border-right-width: 10px;
+  border-bottom-width: thick;
+  border-left-width: thin;
+    
+  }
+.qcont{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border:rgba(11, 10, 10, 0.295);
+  
+}
+.qpaisflecha{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(11, 10, 10, 0.295);
+  
+  border-radius: 5px;
+
+
+  border-top-width: 10px;
+  border-right-width: 10px;
+  border-bottom-width: thick;
+  border-left-width: thin;
+  margin: 10px;
+}
+.qpais{
+    
+    
+    padding-left: 10px;
+    
+}
+.qflecha{
+    
+    
+    padding-right: 10px;
+    
+}
+.qmapa{
+    
+    margin: 10px;
+    display: none;
+}
+.qmapstyle{
+  display: block;
+}

@@ -19,13 +19,22 @@
                   </div>
                   
               </div>
-              <% if (user.email=="admin@clavedesol.com") { %>
-                <div class="botonCompra"><button class="user-button"><a href="http://localhost:3000/">APP REACT</a></button></div> 
-              <% } %>
-
-              <div class="botonCompra"><button class="user-button"><a href="/usuarios/editProfile/<%= user.id%>">Editar</a></button></div>
+              
               
           </section>
       </main>
+      <div class="botonesProfile">
+        <br>
+        <% if (user.email=="admin@clavedesol.com") { %>
+          <div class="botonProfile"><button class="BDP"><a href="http://localhost:3000/">APP REACT</a></button></div> 
+          <br>
+        <% } %>
+          <div class="botonProfile"><button class="BDP"><a href="/usuarios/editProfile/<%= user.id%>">Editar</a></button></div>
+          <br>
+
+      </div>
+      
+      <%- include("./partials/footer") %>
   </body>
+
 </html>
